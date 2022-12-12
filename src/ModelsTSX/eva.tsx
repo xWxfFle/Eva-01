@@ -818,7 +818,7 @@ type GLTFResult = GLTF & {
 };
 
 export function Eva(props: JSX.IntrinsicElements["group"]) {
-  const { nodes, materials } = useGLTF("/eva-01.glb") as unknown as GLTFResult;
+  const { nodes, materials } = useGLTF("Eva-01/eva-01.glb") as unknown as GLTFResult;
   return (
     <group {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
@@ -9830,4 +9830,4 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
   );
 }
 
-useGLTF.preload("/eva-01.glb");
+useGLTF.preload("Eva-01/eva-01.glb");

@@ -1,14 +1,11 @@
 import "./App.css";
 import {
   Environment,
-  OrbitControls,
   ScrollControls,
   SpotLight,
-  Stats,
   useScroll,
 } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Suspense } from "react";
 import { Eva } from "./ModelsTSX/eva";
 import {
   EffectComposer,
@@ -47,7 +44,7 @@ function App() {
           height={480}
         />
         <Bloom
-          luminanceThreshold={0.6}
+          luminanceThreshold={0.7}
           luminanceSmoothing={1}
           height={1}
           intensity={0.1}
@@ -55,26 +52,22 @@ function App() {
         <Noise opacity={0.02} />
         <Vignette eskil={false} offset={0.1} darkness={1.1} />
       </EffectComposer>
-      <Suspense fallback={null}>
-        <Environment preset="city" />
-        <SpotLight
-          penumbra={1}
-          color="purple"
-          position={[2, 8, -9]}
-          distance={58}
-          angle={2.4}
-          intensity={2}
-          attenuation={14}
-          anglePower={0.1}
-        />
-        <ScrollControls pages={3}>
-          <ScrollContainer>
-            <Eva scale={0.005} position={[0, -2, 0]} />
-          </ScrollContainer>
-        </ScrollControls>
-      </Suspense>
-      <Stats></Stats>
-      <OrbitControls makeDefault></OrbitControls>
+      <Environment preset="city" />
+      <SpotLight
+        penumbra={1}
+        color="purple"
+        position={[2, 8, -9]}
+        distance={58}
+        angle={2.4}
+        intensity={2}
+        attenuation={14}
+        anglePower={0.1}
+      />
+      <ScrollControls pages={3}>
+        <ScrollContainer>
+          <Eva scale={0.005} position={[0, -2, 0]} />
+        </ScrollContainer>
+      </ScrollControls>
     </Canvas>
   );
 }
