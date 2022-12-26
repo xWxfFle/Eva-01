@@ -7,6 +7,12 @@
 html,
 body,
 #root {
-   width: 100vw;
+  width: 100vw;
   height: 100vh;
+}
+
+.loader {
+  font-size: 30px;
+  font-weight: 500;
+  color: white;
 }

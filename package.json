@@ -8,13 +8,15 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
   },
   "dependencies": {
-    "@react-three/drei": "^9.34.4",
-    "@react-three/fiber": "^8.8.10",
+    "@react-three/a11y": "^3.0.0",
+    "@react-three/drei": "^9.48.1",
+    "@react-three/fiber": "^8.9.1",
     "@react-three/postprocessing": "^2.7.0",
-    "@types/three": "^0.144.0",
+    "@types/three": "^0.146.0",
     "gh-pages": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
