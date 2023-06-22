@@ -13,8 +13,8 @@
   },
   "dependencies": {
     "@react-three/a11y": "^3.0.0",
-    "@react-three/drei": "^9.48.1",
-    "@react-three/fiber": "^8.9.1",
+    "@react-three/drei": "^9.77.1",
+    "@react-three/fiber": "^8.13.3",
     "@react-three/postprocessing": "^2.7.0",
     "@types/three": "^0.146.0",
     "gh-pages": "^4.0.0",
