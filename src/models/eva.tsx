@@ -6,819 +6,821 @@ source: https://sketchfab.com/3d-models/eva-01-5be173cb71c24a93827fb3fd1de593ea
 title: EVA-01
 */
 
-import * as THREE from "three";
-import { useGLTF} from "@react-three/drei";
-import { GLTF } from "three-stdlib";
+import * as THREE from 'three'
+import { useGLTF } from '@react-three/drei'
+import { GLTF } from 'three-stdlib'
 
 type GLTFResult = GLTF & {
   nodes: {
-    plane013_Carbon_FIber_Shader_0: THREE.Mesh;
-    plane016_Carbon_FIber_Shader_0: THREE.Mesh;
-    plane015_VilTorso_0: THREE.Mesh;
-    plane017_EvaGr_0: THREE.Mesh;
-    plane019_Torso_0: THREE.Mesh;
-    eva01030_VilTorso_0: THREE.Mesh;
-    eva01027_TorsoVil2_0: THREE.Mesh;
-    eva01028_VilTorso_0: THREE.Mesh;
-    eva01028_EvaBl_0: THREE.Mesh;
-    eva01024_EvaVil_0: THREE.Mesh;
-    eva01024_EvaRed001_0: THREE.Mesh;
-    eva01022_EvaVil_0: THREE.Mesh;
-    eva01019_EvaGr_0: THREE.Mesh;
-    eva01020_EvaDop_0: THREE.Mesh;
-    eva01018_EvaVil_0: THREE.Mesh;
-    eva01031_EvaVil_0: THREE.Mesh;
-    eva01031_EvaGr_0: THREE.Mesh;
-    eva01017_EvaEyes_0: THREE.Mesh;
-    eva01029_EvaDop_0: THREE.Mesh;
-    eva01029_EvaGr_0: THREE.Mesh;
-    plane_EvaBlack_0: THREE.Mesh;
-    Plane003_EVA_LEGS_0: THREE.Mesh;
-    plane005_TorsoVil2_0: THREE.Mesh;
-    plane006_TorsoVil2_0: THREE.Mesh;
-    plane009_EvaGr_0: THREE.Mesh;
-    plane009_EvaVil_0: THREE.Mesh;
-    plane009_EvaRed001_0: THREE.Mesh;
-    plane008_VilTorso_0: THREE.Mesh;
-    plane003_TorsoVil2_0: THREE.Mesh;
-    Cube_EvaDop_0: THREE.Mesh;
-    plane007_EvaBl_0: THREE.Mesh;
-    plane007_TorsoVil2_0: THREE.Mesh;
-    Retopo_Text_EvaBlack_0: THREE.Mesh;
-    eva01036_Material003_0: THREE.Mesh;
-    eva01036_VilTorso_0: THREE.Mesh;
-    eva01007_EvaOr_0: THREE.Mesh;
-    eva01007_EvaGr_0: THREE.Mesh;
-    eva01007_VilTorso_0: THREE.Mesh;
-    eva01007_TorsoVil2_0: THREE.Mesh;
-    Plane002_EvaOrange001_0: THREE.Mesh;
-    Plane004_EvaVil_0: THREE.Mesh;
-    Plane004_EvaGr_0: THREE.Mesh;
-    eva01004_Material004_0: THREE.Mesh;
-    eva01004_Material_0: THREE.Mesh;
-    eva01004_HandBlack_0: THREE.Mesh;
-    eva01006_EvaBlack_0: THREE.Mesh;
-    plane010_res_0: THREE.Mesh;
-    plane020_Carbon_FIber_Shader_0: THREE.Mesh;
-    Plane006_EVA_LEGS_0: THREE.Mesh;
-    plane023_Carbon_FIber_Shader_0: THREE.Mesh;
-    plane026_EvaBl_0: THREE.Mesh;
-    plane026_TorsoVil2_0: THREE.Mesh;
-    Plane008_EvaVil_0: THREE.Mesh;
-    Plane008_EvaGr_0: THREE.Mesh;
-    plane011_EvaGr_0: THREE.Mesh;
-    plane011_Hands_0: THREE.Mesh;
-    plane011_HandBlack_0: THREE.Mesh;
-    plane018_EvaGr_0: THREE.Mesh;
-    plane018_Hands_0: THREE.Mesh;
-    plane018_HandBlack_0: THREE.Mesh;
-    plane028_EvaOr_0: THREE.Mesh;
-    plane032_EvaGr_0: THREE.Mesh;
-    plane032_HDSblack_0: THREE.Mesh;
-    plane024_EvaGr_0: THREE.Mesh;
-    plane024_HDSblack_0: THREE.Mesh;
-    plane024_HDSvil_0: THREE.Mesh;
-    plane002_EVA_LEGS_0: THREE.Mesh;
-    plane001_EvaOrange_0: THREE.Mesh;
-    plane014_EvaGr_0: THREE.Mesh;
-    plane014_EvaBl_0: THREE.Mesh;
-    cube001_EvaBl_0: THREE.Mesh;
-    cube_EvaGr_0: THREE.Mesh;
-    Circle001_EVA_LEGS_0: THREE.Mesh;
-    Circle002_EVA_LEGS_0: THREE.Mesh;
-    plane004_EvaGr_0: THREE.Mesh;
-    plane004_EvaBl_0: THREE.Mesh;
-    plane021_EVA_LEGS_0: THREE.Mesh;
-    plane022_EvaOrange_0: THREE.Mesh;
-    cube002_EvaBl_0: THREE.Mesh;
-    cube003_EvaGr_0: THREE.Mesh;
-    Cube001_cell003_Material007_0: THREE.Mesh;
-    Cube001_cell012_Material007_0: THREE.Mesh;
-    Cube001_cell013_Material005_0: THREE.Mesh;
-    Cube001_cell014_Material007_0: THREE.Mesh;
-    Cube001_cell002_Material007_0: THREE.Mesh;
-    Cube001_cell004_Material007_0: THREE.Mesh;
-    Cube001_cell005_Material007_0: THREE.Mesh;
-    Cube001_cell006_Material007_0: THREE.Mesh;
-    Cube001_cell008_Material007_0: THREE.Mesh;
-    Cube001_cell009_Material007_0: THREE.Mesh;
-    Cube001_cell010_Material007_0: THREE.Mesh;
-    Cube001_cell011_Material007_0: THREE.Mesh;
-    Cube001_cell015_Material007_0: THREE.Mesh;
-    Cube001_cell016_Material007_0: THREE.Mesh;
-    Cube001_cell017_Material007_0: THREE.Mesh;
-    Cube001_cell018_Material007_0: THREE.Mesh;
-    Cube001_cell019_Material007_0: THREE.Mesh;
-    Cube001_cell020_Material007_0: THREE.Mesh;
-    Cube001_cell023_Material007_0: THREE.Mesh;
-    Cube001_cell024_Material007_0: THREE.Mesh;
-    Cube001_cell026_Material007_0: THREE.Mesh;
-    Cube001_cell028_Material007_0: THREE.Mesh;
-    Cube001_cell029_Material007_0: THREE.Mesh;
-    Cube001_cell030_Material007_0: THREE.Mesh;
-    Cube001_cell031_Material007_0: THREE.Mesh;
-    Cube001_cell033_Material007_0: THREE.Mesh;
-    Cube001_cell034_Material007_0: THREE.Mesh;
-    Cube001_cell035_Material007_0: THREE.Mesh;
-    Cube001_cell039_Material007_0: THREE.Mesh;
-    Cube001_cell040_Material007_0: THREE.Mesh;
-    Cube001_cell042_Material007_0: THREE.Mesh;
-    Cube001_cell043_Material007_0: THREE.Mesh;
-    Cube001_cell045_Material007_0: THREE.Mesh;
-    Cube001_cell046_Material007_0: THREE.Mesh;
-    Cube001_cell047_Material007_0: THREE.Mesh;
-    Cube001_cell048_Material007_0: THREE.Mesh;
-    Cube001_cell051_Material007_0: THREE.Mesh;
-    Cube001_cell052_Material007_0: THREE.Mesh;
-    Cube001_cell054_Material007_0: THREE.Mesh;
-    Cube001_cell055_Material007_0: THREE.Mesh;
-    Cube001_cell058_Material007_0: THREE.Mesh;
-    Cube001_cell059_Material007_0: THREE.Mesh;
-    Cube001_cell061_Material007_0: THREE.Mesh;
-    Cube001_cell062_Material007_0: THREE.Mesh;
-    Cube001_cell063_Material007_0: THREE.Mesh;
-    Cube001_cell064_Material007_0: THREE.Mesh;
-    Cube001_cell065_Material007_0: THREE.Mesh;
-    Cube001_cell066_Material007_0: THREE.Mesh;
-    Cube001_cell067_Material007_0: THREE.Mesh;
-    Cube001_cell068_Material007_0: THREE.Mesh;
-    Cube001_cell069_Material007_0: THREE.Mesh;
-    Cube001_cell070_Material007_0: THREE.Mesh;
-    Cube001_cell071_Material007_0: THREE.Mesh;
-    Cube001_cell072_Material007_0: THREE.Mesh;
-    Cube001_cell073_Material007_0: THREE.Mesh;
-    Cube001_cell075_Material007_0: THREE.Mesh;
-    Cube001_cell076_Material007_0: THREE.Mesh;
-    Cube001_cell077_Material007_0: THREE.Mesh;
-    Cube001_cell078_Material007_0: THREE.Mesh;
-    Cube001_cell079_Material007_0: THREE.Mesh;
-    Cube001_cell080_Material007_0: THREE.Mesh;
-    Cube001_cell081_Material007_0: THREE.Mesh;
-    Cube001_cell083_Material007_0: THREE.Mesh;
-    Cube001_cell084_Material007_0: THREE.Mesh;
-    Cube001_cell086_Material007_0: THREE.Mesh;
-    Cube001_cell087_Material007_0: THREE.Mesh;
-    Cube001_cell089_Material007_0: THREE.Mesh;
-    Cube001_cell090_Material007_0: THREE.Mesh;
-    Cube001_cell092_Material007_0: THREE.Mesh;
-    Cube001_cell093_Material007_0: THREE.Mesh;
-    Cube001_cell094_Material007_0: THREE.Mesh;
-    Cube001_cell095_Material007_0: THREE.Mesh;
-    Cube001_cell096_Material007_0: THREE.Mesh;
-    Cube001_cell098_Material007_0: THREE.Mesh;
-    Cube001_cell099_Material007_0: THREE.Mesh;
-    Cube001_cell100_Material007_0: THREE.Mesh;
-    Cube001_cell101_Material007_0: THREE.Mesh;
-    Cube001_cell103_Material007_0: THREE.Mesh;
-    Cube001_cell105_Material007_0: THREE.Mesh;
-    Cube001_cell107_Material007_0: THREE.Mesh;
-    Cube001_cell109_Material007_0: THREE.Mesh;
-    Cube001_cell110_Material007_0: THREE.Mesh;
-    Cube001_cell111_Material007_0: THREE.Mesh;
-    Cube001_cell112_Material007_0: THREE.Mesh;
-    Cube001_cell114_Material007_0: THREE.Mesh;
-    Cube001_cell115_Material007_0: THREE.Mesh;
-    Cube001_cell116_Material007_0: THREE.Mesh;
-    Cube001_cell117_Material007_0: THREE.Mesh;
-    Cube001_cell120_Material007_0: THREE.Mesh;
-    Cube001_cell121_Material007_0: THREE.Mesh;
-    Cube001_cell122_Material007_0: THREE.Mesh;
-    Cube001_cell123_Material007_0: THREE.Mesh;
-    Cube001_cell124_Material007_0: THREE.Mesh;
-    Cube001_cell125_Material007_0: THREE.Mesh;
-    Cube001_cell126_Material007_0: THREE.Mesh;
-    Cube001_cell127_Material007_0: THREE.Mesh;
-    Cube001_cell128_Material007_0: THREE.Mesh;
-    Cube001_cell129_Material007_0: THREE.Mesh;
-    Cube001_cell130_Material007_0: THREE.Mesh;
-    Cube001_cell131_Material007_0: THREE.Mesh;
-    Cube001_cell133_Material007_0: THREE.Mesh;
-    Cube001_cell134_Material007_0: THREE.Mesh;
-    Cube001_cell135_Material007_0: THREE.Mesh;
-    Cube001_cell138_Material007_0: THREE.Mesh;
-    Cube001_cell139_Material007_0: THREE.Mesh;
-    Cube001_cell140_Material007_0: THREE.Mesh;
-    Cube001_cell141_Material007_0: THREE.Mesh;
-    Cube001_cell143_Material007_0: THREE.Mesh;
-    Cube001_cell145_Material007_0: THREE.Mesh;
-    Cube001_cell146_Material007_0: THREE.Mesh;
-    Cube001_cell147_Material007_0: THREE.Mesh;
-    Cube001_cell148_Material007_0: THREE.Mesh;
-    Cube001_cell150_Material007_0: THREE.Mesh;
-    Cube001_cell152_Material007_0: THREE.Mesh;
-    Cube001_cell153_Material007_0: THREE.Mesh;
-    Cube001_cell155_Material007_0: THREE.Mesh;
-    Cube001_cell156_Material007_0: THREE.Mesh;
-    Cube001_cell158_Material007_0: THREE.Mesh;
-    Cube001_cell159_Material007_0: THREE.Mesh;
-    Cube001_cell160_Material007_0: THREE.Mesh;
-    Cube001_cell161_Material007_0: THREE.Mesh;
-    Cube001_cell163_Material007_0: THREE.Mesh;
-    Cube001_cell164_Material007_0: THREE.Mesh;
-    Cube001_cell165_Material007_0: THREE.Mesh;
-    Cube001_cell166_Material007_0: THREE.Mesh;
-    Cube001_cell167_Material007_0: THREE.Mesh;
-    Cube001_cell168_Material007_0: THREE.Mesh;
-    Cube001_cell169_Material007_0: THREE.Mesh;
-    Cube001_cell171_Material007_0: THREE.Mesh;
-    Cube001_cell172_Material007_0: THREE.Mesh;
-    Cube001_cell173_Material007_0: THREE.Mesh;
-    Cube001_cell174_Material007_0: THREE.Mesh;
-    Cube001_cell175_Material007_0: THREE.Mesh;
-    Cube001_cell176_Material007_0: THREE.Mesh;
-    Cube001_cell177_Material007_0: THREE.Mesh;
-    Cube001_cell178_Material007_0: THREE.Mesh;
-    Cube001_cell179_Material007_0: THREE.Mesh;
-    Cube001_cell180_Material007_0: THREE.Mesh;
-    Cube001_cell181_Material007_0: THREE.Mesh;
-    Cube001_cell182_Material007_0: THREE.Mesh;
-    Cube001_cell183_Material007_0: THREE.Mesh;
-    Cube001_cell184_Material007_0: THREE.Mesh;
-    Cube001_cell185_Material007_0: THREE.Mesh;
-    Cube001_cell186_Material007_0: THREE.Mesh;
-    Cube001_cell187_Material007_0: THREE.Mesh;
-    Cube001_cell188_Material007_0: THREE.Mesh;
-    Cube001_cell189_Material007_0: THREE.Mesh;
-    Cube001_cell191_Material007_0: THREE.Mesh;
-    Cube001_cell192_Material007_0: THREE.Mesh;
-    Cube001_cell193_Material007_0: THREE.Mesh;
-    Cube001_cell194_Material007_0: THREE.Mesh;
-    Cube001_cell195_Material007_0: THREE.Mesh;
-    Cube001_cell196_Material007_0: THREE.Mesh;
-    Cube001_cell197_Material007_0: THREE.Mesh;
-    Cube001_cell198_Material007_0: THREE.Mesh;
-    Cube001_cell199_Material007_0: THREE.Mesh;
-    Cube001_cell200_Material007_0: THREE.Mesh;
-    Cube001_cell201_Material007_0: THREE.Mesh;
-    Cube001_cell202_Material007_0: THREE.Mesh;
-    Cube001_cell204_Material007_0: THREE.Mesh;
-    Cube001_cell208_Material007_0: THREE.Mesh;
-    Cube001_cell210_Material007_0: THREE.Mesh;
-    Cube001_cell211_Material007_0: THREE.Mesh;
-    Cube001_cell212_Material007_0: THREE.Mesh;
-    Cube001_cell213_Material007_0: THREE.Mesh;
-    Cube001_cell214_Material007_0: THREE.Mesh;
-    Cube001_cell215_Material007_0: THREE.Mesh;
-    Cube001_cell216_Material007_0: THREE.Mesh;
-    Cube001_cell217_Material007_0: THREE.Mesh;
-    Cube001_cell219_Material007_0: THREE.Mesh;
-    Cube001_cell221_Material007_0: THREE.Mesh;
-    Cube001_cell222_Material007_0: THREE.Mesh;
-    Cube001_cell223_Material007_0: THREE.Mesh;
-    Cube001_cell226_Material007_0: THREE.Mesh;
-    Cube001_cell227_Material007_0: THREE.Mesh;
-    Cube001_cell229_Material007_0: THREE.Mesh;
-    Cube001_cell232_Material007_0: THREE.Mesh;
-    Cube001_cell234_Material007_0: THREE.Mesh;
-    Cube001_cell235_Material007_0: THREE.Mesh;
-    Cube001_cell237_Material007_0: THREE.Mesh;
-    Cube001_cell238_Material007_0: THREE.Mesh;
-    Cube001_cell239_Material007_0: THREE.Mesh;
-    Cube001_cell240_Material007_0: THREE.Mesh;
-    Cube001_cell242_Material007_0: THREE.Mesh;
-    Cube001_cell243_Material007_0: THREE.Mesh;
-    Cube001_cell244_Material007_0: THREE.Mesh;
-    Cube001_cell246_Material007_0: THREE.Mesh;
-    Cube001_cell247_Material007_0: THREE.Mesh;
-    Cube001_cell248_Material007_0: THREE.Mesh;
-    Cube001_cell249_Material007_0: THREE.Mesh;
-    Cube001_cell250_Material007_0: THREE.Mesh;
-    Cube001_cell252_Material007_0: THREE.Mesh;
-    Cube001_cell254_Material007_0: THREE.Mesh;
-    Cube001_cell255_Material007_0: THREE.Mesh;
-    Cube001_cell258_Material007_0: THREE.Mesh;
-    Cube001_cell259_Material007_0: THREE.Mesh;
-    Cube001_cell260_Material007_0: THREE.Mesh;
-    Cube001_cell261_Material007_0: THREE.Mesh;
-    Cube001_cell262_Material007_0: THREE.Mesh;
-    Cube001_cell264_Material007_0: THREE.Mesh;
-    Cube001_cell265_Material007_0: THREE.Mesh;
-    Cube001_cell266_Material007_0: THREE.Mesh;
-    Cube001_cell267_Material007_0: THREE.Mesh;
-    Cube001_cell268_Material007_0: THREE.Mesh;
-    Cube001_cell269_Material007_0: THREE.Mesh;
-    Cube001_cell270_Material007_0: THREE.Mesh;
-    Cube001_cell271_Material007_0: THREE.Mesh;
-    Cube001_cell272_Material007_0: THREE.Mesh;
-    Cube001_cell273_Material007_0: THREE.Mesh;
-    Cube001_cell274_Material007_0: THREE.Mesh;
-    Cube001_cell277_Material007_0: THREE.Mesh;
-    Cube001_cell280_Material007_0: THREE.Mesh;
-    Cube001_cell281_Material007_0: THREE.Mesh;
-    Cube001_cell283_Material007_0: THREE.Mesh;
-    Cube001_cell284_Material007_0: THREE.Mesh;
-    Cube001_cell285_Material007_0: THREE.Mesh;
-    Cube001_cell286_Material007_0: THREE.Mesh;
-    Cube001_cell288_Material007_0: THREE.Mesh;
-    Cube001_cell289_Material007_0: THREE.Mesh;
-    Cube001_cell290_Material007_0: THREE.Mesh;
-    Cube001_cell291_Material007_0: THREE.Mesh;
-    Cube001_cell292_Material007_0: THREE.Mesh;
-    Cube001_cell296_Material007_0: THREE.Mesh;
-    Cube001_cell297_Material007_0: THREE.Mesh;
-    Cube001_cell298_Material007_0: THREE.Mesh;
-    Cube001_cell300_Material007_0: THREE.Mesh;
-    Cube001_cell301_Material007_0: THREE.Mesh;
-    Cube001_cell303_Material007_0: THREE.Mesh;
-    Cube001_cell306_Material007_0: THREE.Mesh;
-    Cylinder_Material004_0: THREE.Mesh;
-    Cylinder001__0: THREE.Mesh;
-    Retopo_Circle_Material001_0: THREE.Mesh;
-    Retopo_Text001__0: THREE.Mesh;
-    Cube001_cell001_Material007_0: THREE.Mesh;
-    Cube001_cell007_Material007_0: THREE.Mesh;
-    Cube001_cell021_Material005_0: THREE.Mesh;
-    Cube001_cell022_Material007_0: THREE.Mesh;
-    Cube001_cell025_Material007_0: THREE.Mesh;
-    Cube001_cell027_Material007_0: THREE.Mesh;
-    Cube001_cell032_Material007_0: THREE.Mesh;
-    Cube001_cell036_Material007_0: THREE.Mesh;
-    Cube001_cell037_Material007_0: THREE.Mesh;
-    Cube001_cell038_Material007_0: THREE.Mesh;
-    Cube001_cell041_Material007_0: THREE.Mesh;
-    Cube001_cell044_Material007_0: THREE.Mesh;
-    Cube001_cell049_Material007_0: THREE.Mesh;
-    Cube001_cell050_Material007_0: THREE.Mesh;
-    Cube001_cell053_Material007_0: THREE.Mesh;
-    Cube001_cell056_Material007_0: THREE.Mesh;
-    Cube001_cell057_Material007_0: THREE.Mesh;
-    Cube001_cell060_Material007_0: THREE.Mesh;
-    Cube001_cell074_Material007_0: THREE.Mesh;
-    Cube001_cell082_Material007_0: THREE.Mesh;
-    Cube001_cell085_Material007_0: THREE.Mesh;
-    Cube001_cell088_Material007_0: THREE.Mesh;
-    Cube001_cell091_Material007_0: THREE.Mesh;
-    Cube001_cell097_Material007_0: THREE.Mesh;
-    Cube001_cell102_Material007_0: THREE.Mesh;
-    Cube001_cell104_Material007_0: THREE.Mesh;
-    Cube001_cell106_Material007_0: THREE.Mesh;
-    Cube001_cell108_Material007_0: THREE.Mesh;
-    Cube001_cell113_Material007_0: THREE.Mesh;
-    Cube001_cell118_Material007_0: THREE.Mesh;
-    Cube001_cell119_Material007_0: THREE.Mesh;
-    Cube001_cell132_Material007_0: THREE.Mesh;
-    Cube001_cell136_Material007_0: THREE.Mesh;
-    Cube001_cell137_Material007_0: THREE.Mesh;
-    Cube001_cell142_Material007_0: THREE.Mesh;
-    Cube001_cell144_Material007_0: THREE.Mesh;
-    Cube001_cell149_Material007_0: THREE.Mesh;
-    Cube001_cell151_Material007_0: THREE.Mesh;
-    Cube001_cell154_Material007_0: THREE.Mesh;
-    Cube001_cell157_Material007_0: THREE.Mesh;
-    Cube001_cell162_Material007_0: THREE.Mesh;
-    Cube001_cell170_Material007_0: THREE.Mesh;
-    Cube001_cell190_Material007_0: THREE.Mesh;
-    Cube001_cell203_Material007_0: THREE.Mesh;
-    Cube001_cell205_Material007_0: THREE.Mesh;
-    Cube001_cell206_Material007_0: THREE.Mesh;
-    Cube001_cell207_Material007_0: THREE.Mesh;
-    Cube001_cell209_Material007_0: THREE.Mesh;
-    Cube001_cell218_Material007_0: THREE.Mesh;
-    Cube001_cell220_Material007_0: THREE.Mesh;
-    Cube001_cell224_Material007_0: THREE.Mesh;
-    Cube001_cell225_Material007_0: THREE.Mesh;
-    Cube001_cell228_Material007_0: THREE.Mesh;
-    Cube001_cell230_Material007_0: THREE.Mesh;
-    Cube001_cell231_Material007_0: THREE.Mesh;
-    Cube001_cell233_Material007_0: THREE.Mesh;
-    Cube001_cell236_Material007_0: THREE.Mesh;
-    Cube001_cell241_Material007_0: THREE.Mesh;
-    Cube001_cell245_Material007_0: THREE.Mesh;
-    Cube001_cell251_Material007_0: THREE.Mesh;
-    Cube001_cell253_Material007_0: THREE.Mesh;
-    Cube001_cell256_Material007_0: THREE.Mesh;
-    Cube001_cell257_Material007_0: THREE.Mesh;
-    Cube001_cell263_Material007_0: THREE.Mesh;
-    Cube001_cell275_Material007_0: THREE.Mesh;
-    Cube001_cell276_Material007_0: THREE.Mesh;
-    Cube001_cell278_Material007_0: THREE.Mesh;
-    Cube001_cell279_Material007_0: THREE.Mesh;
-    Cube001_cell282_Material007_0: THREE.Mesh;
-    Cube001_cell287_Material007_0: THREE.Mesh;
-    Cube001_cell293_Material007_0: THREE.Mesh;
-    Cube001_cell294_Material007_0: THREE.Mesh;
-    Cube001_cell295_Material007_0: THREE.Mesh;
-    Cube001_cell299_Material007_0: THREE.Mesh;
-    Cube001_cell302_Material007_0: THREE.Mesh;
-    Cube001_cell304_Material007_0: THREE.Mesh;
-    Cube001_cell305_Material007_0: THREE.Mesh;
-    Cube001_cell307_Material007_0: THREE.Mesh;
-    Cube001_cell308_Material007_0: THREE.Mesh;
-    Cube001_cell309_Material007_0: THREE.Mesh;
-    Cube001_cell310_Material007_0: THREE.Mesh;
-    Cube001_cell311_Material007_0: THREE.Mesh;
-    Cube001_cell312_Material007_0: THREE.Mesh;
-    Cube001_cell313_Material007_0: THREE.Mesh;
-    Cube001_cell314_Material007_0: THREE.Mesh;
-    Cube001_cell315_Material007_0: THREE.Mesh;
-    Cube001_cell316_Material007_0: THREE.Mesh;
-    Cube001_cell317_Material007_0: THREE.Mesh;
-    Cube001_cell318_Material007_0: THREE.Mesh;
-    Cube001_cell319_Material007_0: THREE.Mesh;
-    Cube001_cell320_Material007_0: THREE.Mesh;
-    Cube001_cell321_Material007_0: THREE.Mesh;
-    Cube001_cell322_Material007_0: THREE.Mesh;
-    Cube001_cell323_Material007_0: THREE.Mesh;
-    Cube001_cell324_Material007_0: THREE.Mesh;
-    Cube001_cell325_Material007_0: THREE.Mesh;
-    Cube001_cell326_Material007_0: THREE.Mesh;
-    Cube001_cell327_Material007_0: THREE.Mesh;
-    Cube001_cell328_Material007_0: THREE.Mesh;
-    Cube001_cell329_Material007_0: THREE.Mesh;
-    Cube001_cell330_Material007_0: THREE.Mesh;
-    Cube001_cell331_Material007_0: THREE.Mesh;
-    Cube001_cell332_Material007_0: THREE.Mesh;
-    Cube001_cell333_Material007_0: THREE.Mesh;
-    Cube001_cell334_Material007_0: THREE.Mesh;
-    Cube001_cell335_Material007_0: THREE.Mesh;
-    Cube001_cell336_Material007_0: THREE.Mesh;
-    Cube001_cell337_Material007_0: THREE.Mesh;
-    Cube001_cell338_Material007_0: THREE.Mesh;
-    Cube001_cell339_Material007_0: THREE.Mesh;
-    Cube001_cell340_Material007_0: THREE.Mesh;
-    Cube001_cell341_Material007_0: THREE.Mesh;
-    Cube001_cell342_Material007_0: THREE.Mesh;
-    Cube001_cell343_Material007_0: THREE.Mesh;
-    Cube001_cell344_Material007_0: THREE.Mesh;
-    Cube001_cell345_Material007_0: THREE.Mesh;
-    Cube001_cell346_Material007_0: THREE.Mesh;
-    Cube001_cell347_Material007_0: THREE.Mesh;
-    Cube001_cell348_Material007_0: THREE.Mesh;
-    Cube001_cell349_Material007_0: THREE.Mesh;
-    Cube001_cell350_Material007_0: THREE.Mesh;
-    Cube001_cell351_Material007_0: THREE.Mesh;
-    Cube001_cell352_Material007_0: THREE.Mesh;
-    Cube001_cell353_Material005_0: THREE.Mesh;
-    Cube001_cell354_Material007_0: THREE.Mesh;
-    Cube001_cell355_Material007_0: THREE.Mesh;
-    Cube001_cell356_Material007_0: THREE.Mesh;
-    Cube001_cell357_Material007_0: THREE.Mesh;
-    Cube001_cell358_Material007_0: THREE.Mesh;
-    Cube001_cell359_Material007_0: THREE.Mesh;
-    Cube001_cell360_Material007_0: THREE.Mesh;
-    Cube001_cell361_Material007_0: THREE.Mesh;
-    Cube001_cell362_Material007_0: THREE.Mesh;
-    Cube001_cell363_Material007_0: THREE.Mesh;
-    Cube001_cell364_Material007_0: THREE.Mesh;
-    Cube001_cell365_Material007_0: THREE.Mesh;
-    Cube001_cell366_Material007_0: THREE.Mesh;
-    Cube001_cell367_Material007_0: THREE.Mesh;
-    Cube001_cell368_Material007_0: THREE.Mesh;
-    Cube001_cell369_Material005_0: THREE.Mesh;
-    Cube001_cell370_Material007_0: THREE.Mesh;
-    Cube001_cell371_Material007_0: THREE.Mesh;
-    Cube001_cell372_Material007_0: THREE.Mesh;
-    Cube001_cell373_Material007_0: THREE.Mesh;
-    Cube001_cell374_Material007_0: THREE.Mesh;
-    Cube001_cell375_Material007_0: THREE.Mesh;
-    Cube001_cell376_Material007_0: THREE.Mesh;
-    Cube001_cell377_Material007_0: THREE.Mesh;
-    Cube001_cell378_Material007_0: THREE.Mesh;
-    Cube001_cell379_Material007_0: THREE.Mesh;
-    Cube001_cell380_Material007_0: THREE.Mesh;
-    Cube001_cell381_Material007_0: THREE.Mesh;
-    Cube001_cell382_Material007_0: THREE.Mesh;
-    Cube001_cell383_Material007_0: THREE.Mesh;
-    Cube001_cell384_Material007_0: THREE.Mesh;
-    Cube001_cell385_Material007_0: THREE.Mesh;
-    Cube001_cell386_Material007_0: THREE.Mesh;
-    Cube001_cell387_Material007_0: THREE.Mesh;
-    Cube001_cell388_Material007_0: THREE.Mesh;
-    Cube001_cell389_Material007_0: THREE.Mesh;
-    Cube001_cell390_Material007_0: THREE.Mesh;
-    Cube001_cell391_Material007_0: THREE.Mesh;
-    Cube001_cell392_Material007_0: THREE.Mesh;
-    Cube001_cell393_Material007_0: THREE.Mesh;
-    Cube001_cell394_Material007_0: THREE.Mesh;
-    Cube001_cell395_Material007_0: THREE.Mesh;
-    Cube001_cell396_Material007_0: THREE.Mesh;
-    Cube001_cell397_Material007_0: THREE.Mesh;
-    Cube001_cell398_Material007_0: THREE.Mesh;
-    Cube001_cell399_Material007_0: THREE.Mesh;
-    Cube001_cell400_Material007_0: THREE.Mesh;
-    Cube001_cell401_Material007_0: THREE.Mesh;
-    Cube001_cell402_Material007_0: THREE.Mesh;
-    Cube001_cell403_Material007_0: THREE.Mesh;
-    Cube001_cell404_Material007_0: THREE.Mesh;
-    Cube001_cell405_Material007_0: THREE.Mesh;
-    Cube001_cell406_Material007_0: THREE.Mesh;
-    Cube001_cell407_Material007_0: THREE.Mesh;
-    Cube001_cell408_Material007_0: THREE.Mesh;
-    Cube001_cell409_Material007_0: THREE.Mesh;
-    Cube001_cell410_Material007_0: THREE.Mesh;
-    Cube001_cell411_Material007_0: THREE.Mesh;
-    Cube001_cell412_Material007_0: THREE.Mesh;
-    Cube001_cell413_Material007_0: THREE.Mesh;
-    Cube001_cell414_Material007_0: THREE.Mesh;
-    Cube001_cell415_Material007_0: THREE.Mesh;
-    Cube001_cell416_Material007_0: THREE.Mesh;
-    Cube001_cell417_Material007_0: THREE.Mesh;
-    Cube001_cell418_Material007_0: THREE.Mesh;
-    Cube001_cell419_Material007_0: THREE.Mesh;
-    Cube001_cell420_Material007_0: THREE.Mesh;
-    Cube001_cell421_Material007_0: THREE.Mesh;
-    Cube001_cell422_Material007_0: THREE.Mesh;
-    Cube001_cell423_Material007_0: THREE.Mesh;
-    Cube001_cell424_Material007_0: THREE.Mesh;
-    Cube001_cell425_Material007_0: THREE.Mesh;
-    Cube001_cell426_Material007_0: THREE.Mesh;
-    Cube001_cell427_Material007_0: THREE.Mesh;
-    Cube001_cell428_Material007_0: THREE.Mesh;
-    Cube001_cell429_Material007_0: THREE.Mesh;
-    Cube001_cell430_Material007_0: THREE.Mesh;
-    Cube001_cell431_Material007_0: THREE.Mesh;
-    Cube001_cell432_Material007_0: THREE.Mesh;
-    Cube001_cell433_Material007_0: THREE.Mesh;
-    Cube001_cell434_Material007_0: THREE.Mesh;
-    Cube001_cell435_Material007_0: THREE.Mesh;
-    Cube001_cell436_Material007_0: THREE.Mesh;
-    Cube001_cell437_Material007_0: THREE.Mesh;
-    Cube001_cell438_Material007_0: THREE.Mesh;
-    Cube001_cell439_Material007_0: THREE.Mesh;
-    Cube001_cell440_Material007_0: THREE.Mesh;
-    Cube001_cell441_Material007_0: THREE.Mesh;
-    Cube001_cell442_Material007_0: THREE.Mesh;
-    Cube001_cell443_Material007_0: THREE.Mesh;
-    Cube001_cell444_Material007_0: THREE.Mesh;
-    Cube001_cell445_Material007_0: THREE.Mesh;
-    Cube001_cell446_Material007_0: THREE.Mesh;
-    Cube001_cell447_Material007_0: THREE.Mesh;
-    Cube001_cell448_Material007_0: THREE.Mesh;
-    Cube001_cell449_Material007_0: THREE.Mesh;
-    Cube001_cell450_Material007_0: THREE.Mesh;
-    Cube001_cell451_Material007_0: THREE.Mesh;
-    Cube001_cell452_Material007_0: THREE.Mesh;
-    Cube001_cell453_Material007_0: THREE.Mesh;
-    Cube001_cell454_Material007_0: THREE.Mesh;
-    Cube001_cell455_Material007_0: THREE.Mesh;
-    Cube001_cell456_Material007_0: THREE.Mesh;
-    Cube001_cell457_Material007_0: THREE.Mesh;
-    Cube001_cell458_Material007_0: THREE.Mesh;
-    Cube001_cell459_Material007_0: THREE.Mesh;
-    Cube001_cell460_Material007_0: THREE.Mesh;
-    Cube001_cell461_Material007_0: THREE.Mesh;
-    Cube001_cell462_Material007_0: THREE.Mesh;
-    Cube001_cell463_Material007_0: THREE.Mesh;
-    Cube001_cell464_Material007_0: THREE.Mesh;
-    Cube001_cell465_Material007_0: THREE.Mesh;
-    Cube001_cell466_Material007_0: THREE.Mesh;
-    Cube001_cell467_Material007_0: THREE.Mesh;
-    Cube001_cell468_Material007_0: THREE.Mesh;
-    Cube001_cell469_Material007_0: THREE.Mesh;
-    Cube001_cell470_Material007_0: THREE.Mesh;
-    Cube001_cell471_Material007_0: THREE.Mesh;
-    Cube001_cell472_Material007_0: THREE.Mesh;
-    Cube001_cell473_Material007_0: THREE.Mesh;
-    Cube001_cell474_Material007_0: THREE.Mesh;
-    Cube001_cell475_Material007_0: THREE.Mesh;
-    Cube001_cell476_Material007_0: THREE.Mesh;
-    Cube001_cell477_Material007_0: THREE.Mesh;
-    Cube001_cell478_Material007_0: THREE.Mesh;
-    Cube001_cell479_Material007_0: THREE.Mesh;
-    Cube001_cell480_Material007_0: THREE.Mesh;
-    Cube001_cell481_Material007_0: THREE.Mesh;
-    Cube001_cell482_Material007_0: THREE.Mesh;
-    Cube001_cell483_Material007_0: THREE.Mesh;
-    Cube001_cell484_Material007_0: THREE.Mesh;
-    Cube001_cell485_Material007_0: THREE.Mesh;
-    Cube001_cell486_Material007_0: THREE.Mesh;
-    Cube001_cell487_Material007_0: THREE.Mesh;
-    Cube001_cell488_Material007_0: THREE.Mesh;
-    Cube001_cell489_Material007_0: THREE.Mesh;
-    Cube001_cell490_Material007_0: THREE.Mesh;
-    Cube001_cell491_Material007_0: THREE.Mesh;
-    Cube001_cell492_Material007_0: THREE.Mesh;
-    Cube001_cell493_Material007_0: THREE.Mesh;
-    Cube001_cell494_Material007_0: THREE.Mesh;
-    Cube001_cell495_Material007_0: THREE.Mesh;
-    Cube001_cell496_Material007_0: THREE.Mesh;
-    Cube001_cell497_Material007_0: THREE.Mesh;
-    Cube001_cell498_Material007_0: THREE.Mesh;
-    Cube001_cell499_Material007_0: THREE.Mesh;
-    Cube001_cell500_Material007_0: THREE.Mesh;
-    Cube001_cell501_Material007_0: THREE.Mesh;
-    Cube001_cell502_Material007_0: THREE.Mesh;
-    Cube001_cell503_Material007_0: THREE.Mesh;
-    Cube001_cell504_Material007_0: THREE.Mesh;
-    Cube001_cell505_Material007_0: THREE.Mesh;
-    Cube001_cell506_Material007_0: THREE.Mesh;
-    Cube001_cell507_Material007_0: THREE.Mesh;
-    Cube001_cell508_Material007_0: THREE.Mesh;
-    Cube001_cell509_Material007_0: THREE.Mesh;
-    Cube001_cell510_Material007_0: THREE.Mesh;
-    Cube001_cell511_Material007_0: THREE.Mesh;
-    Cube001_cell512_Material007_0: THREE.Mesh;
-    Cube001_cell513_Material007_0: THREE.Mesh;
-    Cube001_cell514_Material007_0: THREE.Mesh;
-    Cube001_cell515_Material007_0: THREE.Mesh;
-    Cube001_cell516_Material007_0: THREE.Mesh;
-    Cube001_cell517_Material007_0: THREE.Mesh;
-    Cube001_cell518_Material007_0: THREE.Mesh;
-    Cube001_cell519_Material005_0: THREE.Mesh;
-    Cube001_cell520_Material007_0: THREE.Mesh;
-    Cube001_cell521_Material007_0: THREE.Mesh;
-    Cube001_cell522_Material007_0: THREE.Mesh;
-    Cube001_cell523_Material007_0: THREE.Mesh;
-    Cube001_cell524_Material007_0: THREE.Mesh;
-    Cube001_cell525_Material007_0: THREE.Mesh;
-    Cube001_cell526_Material007_0: THREE.Mesh;
-    Cube001_cell527_Material007_0: THREE.Mesh;
-    Cube001_cell528_Material007_0: THREE.Mesh;
-    Cube001_cell529_Material007_0: THREE.Mesh;
-    Cube001_cell530_Material007_0: THREE.Mesh;
-    Cube001_cell531_Material007_0: THREE.Mesh;
-    Cube001_cell532_Material007_0: THREE.Mesh;
-    Cube001_cell533_Material007_0: THREE.Mesh;
-    Cube001_cell534_Material007_0: THREE.Mesh;
-    Cube001_cell535_Material007_0: THREE.Mesh;
-    Cube001_cell536_Material007_0: THREE.Mesh;
-    Cube001_cell537_Material007_0: THREE.Mesh;
-    Cube001_cell538_Material007_0: THREE.Mesh;
-    Cube001_cell539_Material007_0: THREE.Mesh;
-    Cube001_cell540_Material007_0: THREE.Mesh;
-    Cube001_cell541_Material007_0: THREE.Mesh;
-    Cube001_cell542_Material007_0: THREE.Mesh;
-    Cube001_cell543_Material007_0: THREE.Mesh;
-    Cube001_cell544_Material007_0: THREE.Mesh;
-    Cube001_cell545_Material007_0: THREE.Mesh;
-    Cube001_cell546_Material007_0: THREE.Mesh;
-    Cube001_cell547_Material007_0: THREE.Mesh;
-    Cube001_cell548_Material007_0: THREE.Mesh;
-    Cube001_cell549_Material007_0: THREE.Mesh;
-    Cube001_cell550_Material007_0: THREE.Mesh;
-    Cube001_cell551_Material007_0: THREE.Mesh;
-    Cube001_cell552_Material007_0: THREE.Mesh;
-    Cube001_cell553_Material007_0: THREE.Mesh;
-    Cube001_cell554_Material007_0: THREE.Mesh;
-    Cube001_cell555_Material007_0: THREE.Mesh;
-    Cube001_cell556_Material007_0: THREE.Mesh;
-    Cube001_cell557_Material007_0: THREE.Mesh;
-    Cube001_cell558_Material007_0: THREE.Mesh;
-    Cube001_cell559_Material007_0: THREE.Mesh;
-    Cube001_cell560_Material007_0: THREE.Mesh;
-    Cube001_cell561_Material007_0: THREE.Mesh;
-    Cube001_cell562_Material007_0: THREE.Mesh;
-    Cube001_cell563_Material007_0: THREE.Mesh;
-    Cube001_cell564_Material007_0: THREE.Mesh;
-    Cube001_cell565_Material007_0: THREE.Mesh;
-    Cube001_cell566_Material007_0: THREE.Mesh;
-    Cube001_cell567_Material007_0: THREE.Mesh;
-    Cube001_cell568_Material007_0: THREE.Mesh;
-    Cube001_cell569_Material007_0: THREE.Mesh;
-    Cube001_cell570_Material007_0: THREE.Mesh;
-    Cube001_cell571_Material007_0: THREE.Mesh;
-    Cube001_cell572_Material007_0: THREE.Mesh;
-    Cube001_cell573_Material007_0: THREE.Mesh;
-    Cube001_cell574_Material007_0: THREE.Mesh;
-    Cube001_cell575_Material007_0: THREE.Mesh;
-    Cube001_cell576_Material007_0: THREE.Mesh;
-    Cube001_cell577_Material007_0: THREE.Mesh;
-    Cube001_cell578_Material007_0: THREE.Mesh;
-    Cube001_cell579_Material007_0: THREE.Mesh;
-    Cube001_cell580_Material007_0: THREE.Mesh;
-    Cube001_cell581_Material007_0: THREE.Mesh;
-    Cube001_cell582_Material007_0: THREE.Mesh;
-    Cube001_cell583_Material007_0: THREE.Mesh;
-    Cube001_cell584_Material007_0: THREE.Mesh;
-    Cube001_cell585_Material007_0: THREE.Mesh;
-    Cube001_cell586_Material007_0: THREE.Mesh;
-    Cube001_cell587_Material007_0: THREE.Mesh;
-    Cube001_cell588_Material007_0: THREE.Mesh;
-    Cube001_cell589_Material007_0: THREE.Mesh;
-    Cube001_cell590_Material007_0: THREE.Mesh;
-    Cube001_cell591_Material007_0: THREE.Mesh;
-    Cube001_cell592_Material007_0: THREE.Mesh;
-    Cube001_cell593_Material007_0: THREE.Mesh;
-    Cube001_cell594_Material007_0: THREE.Mesh;
-    Cube001_cell595_Material007_0: THREE.Mesh;
-    Cube001_cell596_Material007_0: THREE.Mesh;
-    Cube001_cell597_Material007_0: THREE.Mesh;
-    Cube001_cell598_Material007_0: THREE.Mesh;
-    Cube001_cell599_Material007_0: THREE.Mesh;
-    Cube001_cell600_Material007_0: THREE.Mesh;
-    Cube001_cell601_Material007_0: THREE.Mesh;
-    Cube001_cell602_Material007_0: THREE.Mesh;
-    Cube001_cell603_Material007_0: THREE.Mesh;
-    Cube001_cell604_Material007_0: THREE.Mesh;
-    Cube001_cell605_Material007_0: THREE.Mesh;
-    Cube001_cell606_Material007_0: THREE.Mesh;
-    Cube001_cell607_Material007_0: THREE.Mesh;
-    Cube001_cell608_Material007_0: THREE.Mesh;
-    Cube001_cell609_Material007_0: THREE.Mesh;
-    Cube001_cell610_Material007_0: THREE.Mesh;
-    Cube001_cell611_Material007_0: THREE.Mesh;
-    Cube001_cell612_Material007_0: THREE.Mesh;
-    Cube001_cell613_Material007_0: THREE.Mesh;
-    Cube001_cell614_Material007_0: THREE.Mesh;
-    Cube001_cell615_Material007_0: THREE.Mesh;
-    Cube001_cell616_Material007_0: THREE.Mesh;
-    Cube001_cell617_Material007_0: THREE.Mesh;
-    Cube001_cell618_Material007_0: THREE.Mesh;
-    Cube001_cell619_Material007_0: THREE.Mesh;
-    Cube001_cell620_Material007_0: THREE.Mesh;
-    Cube001_cell621_Material007_0: THREE.Mesh;
-    Cube001_cell622_Material007_0: THREE.Mesh;
-    Cube001_cell623_Material007_0: THREE.Mesh;
-    Cube001_cell624_Material007_0: THREE.Mesh;
-    Cube001_cell625_Material007_0: THREE.Mesh;
-    Cube001_cell626_Material007_0: THREE.Mesh;
-    Cube001_cell627_Material007_0: THREE.Mesh;
-    Cube001_cell628_Material007_0: THREE.Mesh;
-    Cube001_cell629_Material007_0: THREE.Mesh;
-    Cube001_cell630_Material007_0: THREE.Mesh;
-    Cube001_cell631_Material007_0: THREE.Mesh;
-    Cube001_cell632_Material007_0: THREE.Mesh;
-    Cube001_cell633_Material007_0: THREE.Mesh;
-    Cube001_cell634_Material007_0: THREE.Mesh;
-    Cube001_cell635_Material007_0: THREE.Mesh;
-    Cube001_cell636_Material007_0: THREE.Mesh;
-    Cube001_cell637_Material007_0: THREE.Mesh;
-    Cube001_cell638_Material007_0: THREE.Mesh;
-    Cube001_cell639_Material007_0: THREE.Mesh;
-    Cube001_cell640_Material007_0: THREE.Mesh;
-    Cube001_cell641_Material007_0: THREE.Mesh;
-    Cube001_cell642_Material007_0: THREE.Mesh;
-    Cube001_cell643_Material007_0: THREE.Mesh;
-    Cube001_cell644_Material007_0: THREE.Mesh;
-    Cube001_cell645_Material007_0: THREE.Mesh;
-    Cube001_cell646_Material007_0: THREE.Mesh;
-    Cube001_cell647_Material007_0: THREE.Mesh;
-    Cube001_cell648_Material007_0: THREE.Mesh;
-    Cube001_cell649_Material007_0: THREE.Mesh;
-    Cube001_cell650_Material007_0: THREE.Mesh;
-    Cube001_cell651_Material007_0: THREE.Mesh;
-    Cube001_cell652_Material007_0: THREE.Mesh;
-    Cube001_cell653_Material007_0: THREE.Mesh;
-    Cube001_cell654_Material007_0: THREE.Mesh;
-    Cube001_cell655_Material007_0: THREE.Mesh;
-    Cube001_cell656_Material007_0: THREE.Mesh;
-    Cube001_cell657_Material007_0: THREE.Mesh;
-    Cube001_cell658_Material007_0: THREE.Mesh;
-    Cube001_cell659_Material007_0: THREE.Mesh;
-    Cube001_cell660_Material007_0: THREE.Mesh;
-    Cube001_cell661_Material007_0: THREE.Mesh;
-    Cube001_cell662_Material007_0: THREE.Mesh;
-    Cube001_cell663_Material007_0: THREE.Mesh;
-    Cube001_cell664_Material007_0: THREE.Mesh;
-    Cube001_cell665_Material007_0: THREE.Mesh;
-    Cube001_cell666_Material007_0: THREE.Mesh;
-    Cube001_cell667_Material007_0: THREE.Mesh;
-    Cube001_cell668_Material007_0: THREE.Mesh;
-    Cube001_cell669_Material007_0: THREE.Mesh;
-    Cube001_cell670_Material007_0: THREE.Mesh;
-    Cube001_cell671_Material007_0: THREE.Mesh;
-    Cube001_cell672_Material007_0: THREE.Mesh;
-    Cube001_cell673_Material007_0: THREE.Mesh;
-    Cube001_cell674_Material007_0: THREE.Mesh;
-    Cube001_cell675_Material007_0: THREE.Mesh;
-    Cube001_cell676_Material007_0: THREE.Mesh;
-    Cube001_cell677_Material007_0: THREE.Mesh;
-    Cube001_cell678_Material007_0: THREE.Mesh;
-    Cube001_cell679_Material007_0: THREE.Mesh;
-    Cube001_cell680_Material007_0: THREE.Mesh;
-    Cube001_cell681_Material007_0: THREE.Mesh;
-    Cube001_cell682_Material007_0: THREE.Mesh;
-    Cube001_cell683_Material007_0: THREE.Mesh;
-    Cube001_cell684_Material007_0: THREE.Mesh;
-    Cube001_cell685_Material007_0: THREE.Mesh;
-    Cube001_cell686_Material007_0: THREE.Mesh;
-    Cube001_cell687_Material007_0: THREE.Mesh;
-    Cube001_cell688_Material007_0: THREE.Mesh;
-    Cube001_cell689_Material007_0: THREE.Mesh;
-  };
+    plane013_Carbon_FIber_Shader_0: THREE.Mesh
+    plane016_Carbon_FIber_Shader_0: THREE.Mesh
+    plane015_VilTorso_0: THREE.Mesh
+    plane017_EvaGr_0: THREE.Mesh
+    plane019_Torso_0: THREE.Mesh
+    eva01030_VilTorso_0: THREE.Mesh
+    eva01027_TorsoVil2_0: THREE.Mesh
+    eva01028_VilTorso_0: THREE.Mesh
+    eva01028_EvaBl_0: THREE.Mesh
+    eva01024_EvaVil_0: THREE.Mesh
+    eva01024_EvaRed001_0: THREE.Mesh
+    eva01022_EvaVil_0: THREE.Mesh
+    eva01019_EvaGr_0: THREE.Mesh
+    eva01020_EvaDop_0: THREE.Mesh
+    eva01018_EvaVil_0: THREE.Mesh
+    eva01031_EvaVil_0: THREE.Mesh
+    eva01031_EvaGr_0: THREE.Mesh
+    eva01017_EvaEyes_0: THREE.Mesh
+    eva01029_EvaDop_0: THREE.Mesh
+    eva01029_EvaGr_0: THREE.Mesh
+    plane_EvaBlack_0: THREE.Mesh
+    Plane003_EVA_LEGS_0: THREE.Mesh
+    plane005_TorsoVil2_0: THREE.Mesh
+    plane006_TorsoVil2_0: THREE.Mesh
+    plane009_EvaGr_0: THREE.Mesh
+    plane009_EvaVil_0: THREE.Mesh
+    plane009_EvaRed001_0: THREE.Mesh
+    plane008_VilTorso_0: THREE.Mesh
+    plane003_TorsoVil2_0: THREE.Mesh
+    Cube_EvaDop_0: THREE.Mesh
+    plane007_EvaBl_0: THREE.Mesh
+    plane007_TorsoVil2_0: THREE.Mesh
+    Retopo_Text_EvaBlack_0: THREE.Mesh
+    eva01036_Material003_0: THREE.Mesh
+    eva01036_VilTorso_0: THREE.Mesh
+    eva01007_EvaOr_0: THREE.Mesh
+    eva01007_EvaGr_0: THREE.Mesh
+    eva01007_VilTorso_0: THREE.Mesh
+    eva01007_TorsoVil2_0: THREE.Mesh
+    Plane002_EvaOrange001_0: THREE.Mesh
+    Plane004_EvaVil_0: THREE.Mesh
+    Plane004_EvaGr_0: THREE.Mesh
+    eva01004_Material004_0: THREE.Mesh
+    eva01004_Material_0: THREE.Mesh
+    eva01004_HandBlack_0: THREE.Mesh
+    eva01006_EvaBlack_0: THREE.Mesh
+    plane010_res_0: THREE.Mesh
+    plane020_Carbon_FIber_Shader_0: THREE.Mesh
+    Plane006_EVA_LEGS_0: THREE.Mesh
+    plane023_Carbon_FIber_Shader_0: THREE.Mesh
+    plane026_EvaBl_0: THREE.Mesh
+    plane026_TorsoVil2_0: THREE.Mesh
+    Plane008_EvaVil_0: THREE.Mesh
+    Plane008_EvaGr_0: THREE.Mesh
+    plane011_EvaGr_0: THREE.Mesh
+    plane011_Hands_0: THREE.Mesh
+    plane011_HandBlack_0: THREE.Mesh
+    plane018_EvaGr_0: THREE.Mesh
+    plane018_Hands_0: THREE.Mesh
+    plane018_HandBlack_0: THREE.Mesh
+    plane028_EvaOr_0: THREE.Mesh
+    plane032_EvaGr_0: THREE.Mesh
+    plane032_HDSblack_0: THREE.Mesh
+    plane024_EvaGr_0: THREE.Mesh
+    plane024_HDSblack_0: THREE.Mesh
+    plane024_HDSvil_0: THREE.Mesh
+    plane002_EVA_LEGS_0: THREE.Mesh
+    plane001_EvaOrange_0: THREE.Mesh
+    plane014_EvaGr_0: THREE.Mesh
+    plane014_EvaBl_0: THREE.Mesh
+    cube001_EvaBl_0: THREE.Mesh
+    cube_EvaGr_0: THREE.Mesh
+    Circle001_EVA_LEGS_0: THREE.Mesh
+    Circle002_EVA_LEGS_0: THREE.Mesh
+    plane004_EvaGr_0: THREE.Mesh
+    plane004_EvaBl_0: THREE.Mesh
+    plane021_EVA_LEGS_0: THREE.Mesh
+    plane022_EvaOrange_0: THREE.Mesh
+    cube002_EvaBl_0: THREE.Mesh
+    cube003_EvaGr_0: THREE.Mesh
+    Cube001_cell003_Material007_0: THREE.Mesh
+    Cube001_cell012_Material007_0: THREE.Mesh
+    Cube001_cell013_Material005_0: THREE.Mesh
+    Cube001_cell014_Material007_0: THREE.Mesh
+    Cube001_cell002_Material007_0: THREE.Mesh
+    Cube001_cell004_Material007_0: THREE.Mesh
+    Cube001_cell005_Material007_0: THREE.Mesh
+    Cube001_cell006_Material007_0: THREE.Mesh
+    Cube001_cell008_Material007_0: THREE.Mesh
+    Cube001_cell009_Material007_0: THREE.Mesh
+    Cube001_cell010_Material007_0: THREE.Mesh
+    Cube001_cell011_Material007_0: THREE.Mesh
+    Cube001_cell015_Material007_0: THREE.Mesh
+    Cube001_cell016_Material007_0: THREE.Mesh
+    Cube001_cell017_Material007_0: THREE.Mesh
+    Cube001_cell018_Material007_0: THREE.Mesh
+    Cube001_cell019_Material007_0: THREE.Mesh
+    Cube001_cell020_Material007_0: THREE.Mesh
+    Cube001_cell023_Material007_0: THREE.Mesh
+    Cube001_cell024_Material007_0: THREE.Mesh
+    Cube001_cell026_Material007_0: THREE.Mesh
+    Cube001_cell028_Material007_0: THREE.Mesh
+    Cube001_cell029_Material007_0: THREE.Mesh
+    Cube001_cell030_Material007_0: THREE.Mesh
+    Cube001_cell031_Material007_0: THREE.Mesh
+    Cube001_cell033_Material007_0: THREE.Mesh
+    Cube001_cell034_Material007_0: THREE.Mesh
+    Cube001_cell035_Material007_0: THREE.Mesh
+    Cube001_cell039_Material007_0: THREE.Mesh
+    Cube001_cell040_Material007_0: THREE.Mesh
+    Cube001_cell042_Material007_0: THREE.Mesh
+    Cube001_cell043_Material007_0: THREE.Mesh
+    Cube001_cell045_Material007_0: THREE.Mesh
+    Cube001_cell046_Material007_0: THREE.Mesh
+    Cube001_cell047_Material007_0: THREE.Mesh
+    Cube001_cell048_Material007_0: THREE.Mesh
+    Cube001_cell051_Material007_0: THREE.Mesh
+    Cube001_cell052_Material007_0: THREE.Mesh
+    Cube001_cell054_Material007_0: THREE.Mesh
+    Cube001_cell055_Material007_0: THREE.Mesh
+    Cube001_cell058_Material007_0: THREE.Mesh
+    Cube001_cell059_Material007_0: THREE.Mesh
+    Cube001_cell061_Material007_0: THREE.Mesh
+    Cube001_cell062_Material007_0: THREE.Mesh
+    Cube001_cell063_Material007_0: THREE.Mesh
+    Cube001_cell064_Material007_0: THREE.Mesh
+    Cube001_cell065_Material007_0: THREE.Mesh
+    Cube001_cell066_Material007_0: THREE.Mesh
+    Cube001_cell067_Material007_0: THREE.Mesh
+    Cube001_cell068_Material007_0: THREE.Mesh
+    Cube001_cell069_Material007_0: THREE.Mesh
+    Cube001_cell070_Material007_0: THREE.Mesh
+    Cube001_cell071_Material007_0: THREE.Mesh
+    Cube001_cell072_Material007_0: THREE.Mesh
+    Cube001_cell073_Material007_0: THREE.Mesh
+    Cube001_cell075_Material007_0: THREE.Mesh
+    Cube001_cell076_Material007_0: THREE.Mesh
+    Cube001_cell077_Material007_0: THREE.Mesh
+    Cube001_cell078_Material007_0: THREE.Mesh
+    Cube001_cell079_Material007_0: THREE.Mesh
+    Cube001_cell080_Material007_0: THREE.Mesh
+    Cube001_cell081_Material007_0: THREE.Mesh
+    Cube001_cell083_Material007_0: THREE.Mesh
+    Cube001_cell084_Material007_0: THREE.Mesh
+    Cube001_cell086_Material007_0: THREE.Mesh
+    Cube001_cell087_Material007_0: THREE.Mesh
+    Cube001_cell089_Material007_0: THREE.Mesh
+    Cube001_cell090_Material007_0: THREE.Mesh
+    Cube001_cell092_Material007_0: THREE.Mesh
+    Cube001_cell093_Material007_0: THREE.Mesh
+    Cube001_cell094_Material007_0: THREE.Mesh
+    Cube001_cell095_Material007_0: THREE.Mesh
+    Cube001_cell096_Material007_0: THREE.Mesh
+    Cube001_cell098_Material007_0: THREE.Mesh
+    Cube001_cell099_Material007_0: THREE.Mesh
+    Cube001_cell100_Material007_0: THREE.Mesh
+    Cube001_cell101_Material007_0: THREE.Mesh
+    Cube001_cell103_Material007_0: THREE.Mesh
+    Cube001_cell105_Material007_0: THREE.Mesh
+    Cube001_cell107_Material007_0: THREE.Mesh
+    Cube001_cell109_Material007_0: THREE.Mesh
+    Cube001_cell110_Material007_0: THREE.Mesh
+    Cube001_cell111_Material007_0: THREE.Mesh
+    Cube001_cell112_Material007_0: THREE.Mesh
+    Cube001_cell114_Material007_0: THREE.Mesh
+    Cube001_cell115_Material007_0: THREE.Mesh
+    Cube001_cell116_Material007_0: THREE.Mesh
+    Cube001_cell117_Material007_0: THREE.Mesh
+    Cube001_cell120_Material007_0: THREE.Mesh
+    Cube001_cell121_Material007_0: THREE.Mesh
+    Cube001_cell122_Material007_0: THREE.Mesh
+    Cube001_cell123_Material007_0: THREE.Mesh
+    Cube001_cell124_Material007_0: THREE.Mesh
+    Cube001_cell125_Material007_0: THREE.Mesh
+    Cube001_cell126_Material007_0: THREE.Mesh
+    Cube001_cell127_Material007_0: THREE.Mesh
+    Cube001_cell128_Material007_0: THREE.Mesh
+    Cube001_cell129_Material007_0: THREE.Mesh
+    Cube001_cell130_Material007_0: THREE.Mesh
+    Cube001_cell131_Material007_0: THREE.Mesh
+    Cube001_cell133_Material007_0: THREE.Mesh
+    Cube001_cell134_Material007_0: THREE.Mesh
+    Cube001_cell135_Material007_0: THREE.Mesh
+    Cube001_cell138_Material007_0: THREE.Mesh
+    Cube001_cell139_Material007_0: THREE.Mesh
+    Cube001_cell140_Material007_0: THREE.Mesh
+    Cube001_cell141_Material007_0: THREE.Mesh
+    Cube001_cell143_Material007_0: THREE.Mesh
+    Cube001_cell145_Material007_0: THREE.Mesh
+    Cube001_cell146_Material007_0: THREE.Mesh
+    Cube001_cell147_Material007_0: THREE.Mesh
+    Cube001_cell148_Material007_0: THREE.Mesh
+    Cube001_cell150_Material007_0: THREE.Mesh
+    Cube001_cell152_Material007_0: THREE.Mesh
+    Cube001_cell153_Material007_0: THREE.Mesh
+    Cube001_cell155_Material007_0: THREE.Mesh
+    Cube001_cell156_Material007_0: THREE.Mesh
+    Cube001_cell158_Material007_0: THREE.Mesh
+    Cube001_cell159_Material007_0: THREE.Mesh
+    Cube001_cell160_Material007_0: THREE.Mesh
+    Cube001_cell161_Material007_0: THREE.Mesh
+    Cube001_cell163_Material007_0: THREE.Mesh
+    Cube001_cell164_Material007_0: THREE.Mesh
+    Cube001_cell165_Material007_0: THREE.Mesh
+    Cube001_cell166_Material007_0: THREE.Mesh
+    Cube001_cell167_Material007_0: THREE.Mesh
+    Cube001_cell168_Material007_0: THREE.Mesh
+    Cube001_cell169_Material007_0: THREE.Mesh
+    Cube001_cell171_Material007_0: THREE.Mesh
+    Cube001_cell172_Material007_0: THREE.Mesh
+    Cube001_cell173_Material007_0: THREE.Mesh
+    Cube001_cell174_Material007_0: THREE.Mesh
+    Cube001_cell175_Material007_0: THREE.Mesh
+    Cube001_cell176_Material007_0: THREE.Mesh
+    Cube001_cell177_Material007_0: THREE.Mesh
+    Cube001_cell178_Material007_0: THREE.Mesh
+    Cube001_cell179_Material007_0: THREE.Mesh
+    Cube001_cell180_Material007_0: THREE.Mesh
+    Cube001_cell181_Material007_0: THREE.Mesh
+    Cube001_cell182_Material007_0: THREE.Mesh
+    Cube001_cell183_Material007_0: THREE.Mesh
+    Cube001_cell184_Material007_0: THREE.Mesh
+    Cube001_cell185_Material007_0: THREE.Mesh
+    Cube001_cell186_Material007_0: THREE.Mesh
+    Cube001_cell187_Material007_0: THREE.Mesh
+    Cube001_cell188_Material007_0: THREE.Mesh
+    Cube001_cell189_Material007_0: THREE.Mesh
+    Cube001_cell191_Material007_0: THREE.Mesh
+    Cube001_cell192_Material007_0: THREE.Mesh
+    Cube001_cell193_Material007_0: THREE.Mesh
+    Cube001_cell194_Material007_0: THREE.Mesh
+    Cube001_cell195_Material007_0: THREE.Mesh
+    Cube001_cell196_Material007_0: THREE.Mesh
+    Cube001_cell197_Material007_0: THREE.Mesh
+    Cube001_cell198_Material007_0: THREE.Mesh
+    Cube001_cell199_Material007_0: THREE.Mesh
+    Cube001_cell200_Material007_0: THREE.Mesh
+    Cube001_cell201_Material007_0: THREE.Mesh
+    Cube001_cell202_Material007_0: THREE.Mesh
+    Cube001_cell204_Material007_0: THREE.Mesh
+    Cube001_cell208_Material007_0: THREE.Mesh
+    Cube001_cell210_Material007_0: THREE.Mesh
+    Cube001_cell211_Material007_0: THREE.Mesh
+    Cube001_cell212_Material007_0: THREE.Mesh
+    Cube001_cell213_Material007_0: THREE.Mesh
+    Cube001_cell214_Material007_0: THREE.Mesh
+    Cube001_cell215_Material007_0: THREE.Mesh
+    Cube001_cell216_Material007_0: THREE.Mesh
+    Cube001_cell217_Material007_0: THREE.Mesh
+    Cube001_cell219_Material007_0: THREE.Mesh
+    Cube001_cell221_Material007_0: THREE.Mesh
+    Cube001_cell222_Material007_0: THREE.Mesh
+    Cube001_cell223_Material007_0: THREE.Mesh
+    Cube001_cell226_Material007_0: THREE.Mesh
+    Cube001_cell227_Material007_0: THREE.Mesh
+    Cube001_cell229_Material007_0: THREE.Mesh
+    Cube001_cell232_Material007_0: THREE.Mesh
+    Cube001_cell234_Material007_0: THREE.Mesh
+    Cube001_cell235_Material007_0: THREE.Mesh
+    Cube001_cell237_Material007_0: THREE.Mesh
+    Cube001_cell238_Material007_0: THREE.Mesh
+    Cube001_cell239_Material007_0: THREE.Mesh
+    Cube001_cell240_Material007_0: THREE.Mesh
+    Cube001_cell242_Material007_0: THREE.Mesh
+    Cube001_cell243_Material007_0: THREE.Mesh
+    Cube001_cell244_Material007_0: THREE.Mesh
+    Cube001_cell246_Material007_0: THREE.Mesh
+    Cube001_cell247_Material007_0: THREE.Mesh
+    Cube001_cell248_Material007_0: THREE.Mesh
+    Cube001_cell249_Material007_0: THREE.Mesh
+    Cube001_cell250_Material007_0: THREE.Mesh
+    Cube001_cell252_Material007_0: THREE.Mesh
+    Cube001_cell254_Material007_0: THREE.Mesh
+    Cube001_cell255_Material007_0: THREE.Mesh
+    Cube001_cell258_Material007_0: THREE.Mesh
+    Cube001_cell259_Material007_0: THREE.Mesh
+    Cube001_cell260_Material007_0: THREE.Mesh
+    Cube001_cell261_Material007_0: THREE.Mesh
+    Cube001_cell262_Material007_0: THREE.Mesh
+    Cube001_cell264_Material007_0: THREE.Mesh
+    Cube001_cell265_Material007_0: THREE.Mesh
+    Cube001_cell266_Material007_0: THREE.Mesh
+    Cube001_cell267_Material007_0: THREE.Mesh
+    Cube001_cell268_Material007_0: THREE.Mesh
+    Cube001_cell269_Material007_0: THREE.Mesh
+    Cube001_cell270_Material007_0: THREE.Mesh
+    Cube001_cell271_Material007_0: THREE.Mesh
+    Cube001_cell272_Material007_0: THREE.Mesh
+    Cube001_cell273_Material007_0: THREE.Mesh
+    Cube001_cell274_Material007_0: THREE.Mesh
+    Cube001_cell277_Material007_0: THREE.Mesh
+    Cube001_cell280_Material007_0: THREE.Mesh
+    Cube001_cell281_Material007_0: THREE.Mesh
+    Cube001_cell283_Material007_0: THREE.Mesh
+    Cube001_cell284_Material007_0: THREE.Mesh
+    Cube001_cell285_Material007_0: THREE.Mesh
+    Cube001_cell286_Material007_0: THREE.Mesh
+    Cube001_cell288_Material007_0: THREE.Mesh
+    Cube001_cell289_Material007_0: THREE.Mesh
+    Cube001_cell290_Material007_0: THREE.Mesh
+    Cube001_cell291_Material007_0: THREE.Mesh
+    Cube001_cell292_Material007_0: THREE.Mesh
+    Cube001_cell296_Material007_0: THREE.Mesh
+    Cube001_cell297_Material007_0: THREE.Mesh
+    Cube001_cell298_Material007_0: THREE.Mesh
+    Cube001_cell300_Material007_0: THREE.Mesh
+    Cube001_cell301_Material007_0: THREE.Mesh
+    Cube001_cell303_Material007_0: THREE.Mesh
+    Cube001_cell306_Material007_0: THREE.Mesh
+    Cylinder_Material004_0: THREE.Mesh
+    Cylinder001__0: THREE.Mesh
+    Retopo_Circle_Material001_0: THREE.Mesh
+    Retopo_Text001__0: THREE.Mesh
+    Cube001_cell001_Material007_0: THREE.Mesh
+    Cube001_cell007_Material007_0: THREE.Mesh
+    Cube001_cell021_Material005_0: THREE.Mesh
+    Cube001_cell022_Material007_0: THREE.Mesh
+    Cube001_cell025_Material007_0: THREE.Mesh
+    Cube001_cell027_Material007_0: THREE.Mesh
+    Cube001_cell032_Material007_0: THREE.Mesh
+    Cube001_cell036_Material007_0: THREE.Mesh
+    Cube001_cell037_Material007_0: THREE.Mesh
+    Cube001_cell038_Material007_0: THREE.Mesh
+    Cube001_cell041_Material007_0: THREE.Mesh
+    Cube001_cell044_Material007_0: THREE.Mesh
+    Cube001_cell049_Material007_0: THREE.Mesh
+    Cube001_cell050_Material007_0: THREE.Mesh
+    Cube001_cell053_Material007_0: THREE.Mesh
+    Cube001_cell056_Material007_0: THREE.Mesh
+    Cube001_cell057_Material007_0: THREE.Mesh
+    Cube001_cell060_Material007_0: THREE.Mesh
+    Cube001_cell074_Material007_0: THREE.Mesh
+    Cube001_cell082_Material007_0: THREE.Mesh
+    Cube001_cell085_Material007_0: THREE.Mesh
+    Cube001_cell088_Material007_0: THREE.Mesh
+    Cube001_cell091_Material007_0: THREE.Mesh
+    Cube001_cell097_Material007_0: THREE.Mesh
+    Cube001_cell102_Material007_0: THREE.Mesh
+    Cube001_cell104_Material007_0: THREE.Mesh
+    Cube001_cell106_Material007_0: THREE.Mesh
+    Cube001_cell108_Material007_0: THREE.Mesh
+    Cube001_cell113_Material007_0: THREE.Mesh
+    Cube001_cell118_Material007_0: THREE.Mesh
+    Cube001_cell119_Material007_0: THREE.Mesh
+    Cube001_cell132_Material007_0: THREE.Mesh
+    Cube001_cell136_Material007_0: THREE.Mesh
+    Cube001_cell137_Material007_0: THREE.Mesh
+    Cube001_cell142_Material007_0: THREE.Mesh
+    Cube001_cell144_Material007_0: THREE.Mesh
+    Cube001_cell149_Material007_0: THREE.Mesh
+    Cube001_cell151_Material007_0: THREE.Mesh
+    Cube001_cell154_Material007_0: THREE.Mesh
+    Cube001_cell157_Material007_0: THREE.Mesh
+    Cube001_cell162_Material007_0: THREE.Mesh
+    Cube001_cell170_Material007_0: THREE.Mesh
+    Cube001_cell190_Material007_0: THREE.Mesh
+    Cube001_cell203_Material007_0: THREE.Mesh
+    Cube001_cell205_Material007_0: THREE.Mesh
+    Cube001_cell206_Material007_0: THREE.Mesh
+    Cube001_cell207_Material007_0: THREE.Mesh
+    Cube001_cell209_Material007_0: THREE.Mesh
+    Cube001_cell218_Material007_0: THREE.Mesh
+    Cube001_cell220_Material007_0: THREE.Mesh
+    Cube001_cell224_Material007_0: THREE.Mesh
+    Cube001_cell225_Material007_0: THREE.Mesh
+    Cube001_cell228_Material007_0: THREE.Mesh
+    Cube001_cell230_Material007_0: THREE.Mesh
+    Cube001_cell231_Material007_0: THREE.Mesh
+    Cube001_cell233_Material007_0: THREE.Mesh
+    Cube001_cell236_Material007_0: THREE.Mesh
+    Cube001_cell241_Material007_0: THREE.Mesh
+    Cube001_cell245_Material007_0: THREE.Mesh
+    Cube001_cell251_Material007_0: THREE.Mesh
+    Cube001_cell253_Material007_0: THREE.Mesh
+    Cube001_cell256_Material007_0: THREE.Mesh
+    Cube001_cell257_Material007_0: THREE.Mesh
+    Cube001_cell263_Material007_0: THREE.Mesh
+    Cube001_cell275_Material007_0: THREE.Mesh
+    Cube001_cell276_Material007_0: THREE.Mesh
+    Cube001_cell278_Material007_0: THREE.Mesh
+    Cube001_cell279_Material007_0: THREE.Mesh
+    Cube001_cell282_Material007_0: THREE.Mesh
+    Cube001_cell287_Material007_0: THREE.Mesh
+    Cube001_cell293_Material007_0: THREE.Mesh
+    Cube001_cell294_Material007_0: THREE.Mesh
+    Cube001_cell295_Material007_0: THREE.Mesh
+    Cube001_cell299_Material007_0: THREE.Mesh
+    Cube001_cell302_Material007_0: THREE.Mesh
+    Cube001_cell304_Material007_0: THREE.Mesh
+    Cube001_cell305_Material007_0: THREE.Mesh
+    Cube001_cell307_Material007_0: THREE.Mesh
+    Cube001_cell308_Material007_0: THREE.Mesh
+    Cube001_cell309_Material007_0: THREE.Mesh
+    Cube001_cell310_Material007_0: THREE.Mesh
+    Cube001_cell311_Material007_0: THREE.Mesh
+    Cube001_cell312_Material007_0: THREE.Mesh
+    Cube001_cell313_Material007_0: THREE.Mesh
+    Cube001_cell314_Material007_0: THREE.Mesh
+    Cube001_cell315_Material007_0: THREE.Mesh
+    Cube001_cell316_Material007_0: THREE.Mesh
+    Cube001_cell317_Material007_0: THREE.Mesh
+    Cube001_cell318_Material007_0: THREE.Mesh
+    Cube001_cell319_Material007_0: THREE.Mesh
+    Cube001_cell320_Material007_0: THREE.Mesh
+    Cube001_cell321_Material007_0: THREE.Mesh
+    Cube001_cell322_Material007_0: THREE.Mesh
+    Cube001_cell323_Material007_0: THREE.Mesh
+    Cube001_cell324_Material007_0: THREE.Mesh
+    Cube001_cell325_Material007_0: THREE.Mesh
+    Cube001_cell326_Material007_0: THREE.Mesh
+    Cube001_cell327_Material007_0: THREE.Mesh
+    Cube001_cell328_Material007_0: THREE.Mesh
+    Cube001_cell329_Material007_0: THREE.Mesh
+    Cube001_cell330_Material007_0: THREE.Mesh
+    Cube001_cell331_Material007_0: THREE.Mesh
+    Cube001_cell332_Material007_0: THREE.Mesh
+    Cube001_cell333_Material007_0: THREE.Mesh
+    Cube001_cell334_Material007_0: THREE.Mesh
+    Cube001_cell335_Material007_0: THREE.Mesh
+    Cube001_cell336_Material007_0: THREE.Mesh
+    Cube001_cell337_Material007_0: THREE.Mesh
+    Cube001_cell338_Material007_0: THREE.Mesh
+    Cube001_cell339_Material007_0: THREE.Mesh
+    Cube001_cell340_Material007_0: THREE.Mesh
+    Cube001_cell341_Material007_0: THREE.Mesh
+    Cube001_cell342_Material007_0: THREE.Mesh
+    Cube001_cell343_Material007_0: THREE.Mesh
+    Cube001_cell344_Material007_0: THREE.Mesh
+    Cube001_cell345_Material007_0: THREE.Mesh
+    Cube001_cell346_Material007_0: THREE.Mesh
+    Cube001_cell347_Material007_0: THREE.Mesh
+    Cube001_cell348_Material007_0: THREE.Mesh
+    Cube001_cell349_Material007_0: THREE.Mesh
+    Cube001_cell350_Material007_0: THREE.Mesh
+    Cube001_cell351_Material007_0: THREE.Mesh
+    Cube001_cell352_Material007_0: THREE.Mesh
+    Cube001_cell353_Material005_0: THREE.Mesh
+    Cube001_cell354_Material007_0: THREE.Mesh
+    Cube001_cell355_Material007_0: THREE.Mesh
+    Cube001_cell356_Material007_0: THREE.Mesh
+    Cube001_cell357_Material007_0: THREE.Mesh
+    Cube001_cell358_Material007_0: THREE.Mesh
+    Cube001_cell359_Material007_0: THREE.Mesh
+    Cube001_cell360_Material007_0: THREE.Mesh
+    Cube001_cell361_Material007_0: THREE.Mesh
+    Cube001_cell362_Material007_0: THREE.Mesh
+    Cube001_cell363_Material007_0: THREE.Mesh
+    Cube001_cell364_Material007_0: THREE.Mesh
+    Cube001_cell365_Material007_0: THREE.Mesh
+    Cube001_cell366_Material007_0: THREE.Mesh
+    Cube001_cell367_Material007_0: THREE.Mesh
+    Cube001_cell368_Material007_0: THREE.Mesh
+    Cube001_cell369_Material005_0: THREE.Mesh
+    Cube001_cell370_Material007_0: THREE.Mesh
+    Cube001_cell371_Material007_0: THREE.Mesh
+    Cube001_cell372_Material007_0: THREE.Mesh
+    Cube001_cell373_Material007_0: THREE.Mesh
+    Cube001_cell374_Material007_0: THREE.Mesh
+    Cube001_cell375_Material007_0: THREE.Mesh
+    Cube001_cell376_Material007_0: THREE.Mesh
+    Cube001_cell377_Material007_0: THREE.Mesh
+    Cube001_cell378_Material007_0: THREE.Mesh
+    Cube001_cell379_Material007_0: THREE.Mesh
+    Cube001_cell380_Material007_0: THREE.Mesh
+    Cube001_cell381_Material007_0: THREE.Mesh
+    Cube001_cell382_Material007_0: THREE.Mesh
+    Cube001_cell383_Material007_0: THREE.Mesh
+    Cube001_cell384_Material007_0: THREE.Mesh
+    Cube001_cell385_Material007_0: THREE.Mesh
+    Cube001_cell386_Material007_0: THREE.Mesh
+    Cube001_cell387_Material007_0: THREE.Mesh
+    Cube001_cell388_Material007_0: THREE.Mesh
+    Cube001_cell389_Material007_0: THREE.Mesh
+    Cube001_cell390_Material007_0: THREE.Mesh
+    Cube001_cell391_Material007_0: THREE.Mesh
+    Cube001_cell392_Material007_0: THREE.Mesh
+    Cube001_cell393_Material007_0: THREE.Mesh
+    Cube001_cell394_Material007_0: THREE.Mesh
+    Cube001_cell395_Material007_0: THREE.Mesh
+    Cube001_cell396_Material007_0: THREE.Mesh
+    Cube001_cell397_Material007_0: THREE.Mesh
+    Cube001_cell398_Material007_0: THREE.Mesh
+    Cube001_cell399_Material007_0: THREE.Mesh
+    Cube001_cell400_Material007_0: THREE.Mesh
+    Cube001_cell401_Material007_0: THREE.Mesh
+    Cube001_cell402_Material007_0: THREE.Mesh
+    Cube001_cell403_Material007_0: THREE.Mesh
+    Cube001_cell404_Material007_0: THREE.Mesh
+    Cube001_cell405_Material007_0: THREE.Mesh
+    Cube001_cell406_Material007_0: THREE.Mesh
+    Cube001_cell407_Material007_0: THREE.Mesh
+    Cube001_cell408_Material007_0: THREE.Mesh
+    Cube001_cell409_Material007_0: THREE.Mesh
+    Cube001_cell410_Material007_0: THREE.Mesh
+    Cube001_cell411_Material007_0: THREE.Mesh
+    Cube001_cell412_Material007_0: THREE.Mesh
+    Cube001_cell413_Material007_0: THREE.Mesh
+    Cube001_cell414_Material007_0: THREE.Mesh
+    Cube001_cell415_Material007_0: THREE.Mesh
+    Cube001_cell416_Material007_0: THREE.Mesh
+    Cube001_cell417_Material007_0: THREE.Mesh
+    Cube001_cell418_Material007_0: THREE.Mesh
+    Cube001_cell419_Material007_0: THREE.Mesh
+    Cube001_cell420_Material007_0: THREE.Mesh
+    Cube001_cell421_Material007_0: THREE.Mesh
+    Cube001_cell422_Material007_0: THREE.Mesh
+    Cube001_cell423_Material007_0: THREE.Mesh
+    Cube001_cell424_Material007_0: THREE.Mesh
+    Cube001_cell425_Material007_0: THREE.Mesh
+    Cube001_cell426_Material007_0: THREE.Mesh
+    Cube001_cell427_Material007_0: THREE.Mesh
+    Cube001_cell428_Material007_0: THREE.Mesh
+    Cube001_cell429_Material007_0: THREE.Mesh
+    Cube001_cell430_Material007_0: THREE.Mesh
+    Cube001_cell431_Material007_0: THREE.Mesh
+    Cube001_cell432_Material007_0: THREE.Mesh
+    Cube001_cell433_Material007_0: THREE.Mesh
+    Cube001_cell434_Material007_0: THREE.Mesh
+    Cube001_cell435_Material007_0: THREE.Mesh
+    Cube001_cell436_Material007_0: THREE.Mesh
+    Cube001_cell437_Material007_0: THREE.Mesh
+    Cube001_cell438_Material007_0: THREE.Mesh
+    Cube001_cell439_Material007_0: THREE.Mesh
+    Cube001_cell440_Material007_0: THREE.Mesh
+    Cube001_cell441_Material007_0: THREE.Mesh
+    Cube001_cell442_Material007_0: THREE.Mesh
+    Cube001_cell443_Material007_0: THREE.Mesh
+    Cube001_cell444_Material007_0: THREE.Mesh
+    Cube001_cell445_Material007_0: THREE.Mesh
+    Cube001_cell446_Material007_0: THREE.Mesh
+    Cube001_cell447_Material007_0: THREE.Mesh
+    Cube001_cell448_Material007_0: THREE.Mesh
+    Cube001_cell449_Material007_0: THREE.Mesh
+    Cube001_cell450_Material007_0: THREE.Mesh
+    Cube001_cell451_Material007_0: THREE.Mesh
+    Cube001_cell452_Material007_0: THREE.Mesh
+    Cube001_cell453_Material007_0: THREE.Mesh
+    Cube001_cell454_Material007_0: THREE.Mesh
+    Cube001_cell455_Material007_0: THREE.Mesh
+    Cube001_cell456_Material007_0: THREE.Mesh
+    Cube001_cell457_Material007_0: THREE.Mesh
+    Cube001_cell458_Material007_0: THREE.Mesh
+    Cube001_cell459_Material007_0: THREE.Mesh
+    Cube001_cell460_Material007_0: THREE.Mesh
+    Cube001_cell461_Material007_0: THREE.Mesh
+    Cube001_cell462_Material007_0: THREE.Mesh
+    Cube001_cell463_Material007_0: THREE.Mesh
+    Cube001_cell464_Material007_0: THREE.Mesh
+    Cube001_cell465_Material007_0: THREE.Mesh
+    Cube001_cell466_Material007_0: THREE.Mesh
+    Cube001_cell467_Material007_0: THREE.Mesh
+    Cube001_cell468_Material007_0: THREE.Mesh
+    Cube001_cell469_Material007_0: THREE.Mesh
+    Cube001_cell470_Material007_0: THREE.Mesh
+    Cube001_cell471_Material007_0: THREE.Mesh
+    Cube001_cell472_Material007_0: THREE.Mesh
+    Cube001_cell473_Material007_0: THREE.Mesh
+    Cube001_cell474_Material007_0: THREE.Mesh
+    Cube001_cell475_Material007_0: THREE.Mesh
+    Cube001_cell476_Material007_0: THREE.Mesh
+    Cube001_cell477_Material007_0: THREE.Mesh
+    Cube001_cell478_Material007_0: THREE.Mesh
+    Cube001_cell479_Material007_0: THREE.Mesh
+    Cube001_cell480_Material007_0: THREE.Mesh
+    Cube001_cell481_Material007_0: THREE.Mesh
+    Cube001_cell482_Material007_0: THREE.Mesh
+    Cube001_cell483_Material007_0: THREE.Mesh
+    Cube001_cell484_Material007_0: THREE.Mesh
+    Cube001_cell485_Material007_0: THREE.Mesh
+    Cube001_cell486_Material007_0: THREE.Mesh
+    Cube001_cell487_Material007_0: THREE.Mesh
+    Cube001_cell488_Material007_0: THREE.Mesh
+    Cube001_cell489_Material007_0: THREE.Mesh
+    Cube001_cell490_Material007_0: THREE.Mesh
+    Cube001_cell491_Material007_0: THREE.Mesh
+    Cube001_cell492_Material007_0: THREE.Mesh
+    Cube001_cell493_Material007_0: THREE.Mesh
+    Cube001_cell494_Material007_0: THREE.Mesh
+    Cube001_cell495_Material007_0: THREE.Mesh
+    Cube001_cell496_Material007_0: THREE.Mesh
+    Cube001_cell497_Material007_0: THREE.Mesh
+    Cube001_cell498_Material007_0: THREE.Mesh
+    Cube001_cell499_Material007_0: THREE.Mesh
+    Cube001_cell500_Material007_0: THREE.Mesh
+    Cube001_cell501_Material007_0: THREE.Mesh
+    Cube001_cell502_Material007_0: THREE.Mesh
+    Cube001_cell503_Material007_0: THREE.Mesh
+    Cube001_cell504_Material007_0: THREE.Mesh
+    Cube001_cell505_Material007_0: THREE.Mesh
+    Cube001_cell506_Material007_0: THREE.Mesh
+    Cube001_cell507_Material007_0: THREE.Mesh
+    Cube001_cell508_Material007_0: THREE.Mesh
+    Cube001_cell509_Material007_0: THREE.Mesh
+    Cube001_cell510_Material007_0: THREE.Mesh
+    Cube001_cell511_Material007_0: THREE.Mesh
+    Cube001_cell512_Material007_0: THREE.Mesh
+    Cube001_cell513_Material007_0: THREE.Mesh
+    Cube001_cell514_Material007_0: THREE.Mesh
+    Cube001_cell515_Material007_0: THREE.Mesh
+    Cube001_cell516_Material007_0: THREE.Mesh
+    Cube001_cell517_Material007_0: THREE.Mesh
+    Cube001_cell518_Material007_0: THREE.Mesh
+    Cube001_cell519_Material005_0: THREE.Mesh
+    Cube001_cell520_Material007_0: THREE.Mesh
+    Cube001_cell521_Material007_0: THREE.Mesh
+    Cube001_cell522_Material007_0: THREE.Mesh
+    Cube001_cell523_Material007_0: THREE.Mesh
+    Cube001_cell524_Material007_0: THREE.Mesh
+    Cube001_cell525_Material007_0: THREE.Mesh
+    Cube001_cell526_Material007_0: THREE.Mesh
+    Cube001_cell527_Material007_0: THREE.Mesh
+    Cube001_cell528_Material007_0: THREE.Mesh
+    Cube001_cell529_Material007_0: THREE.Mesh
+    Cube001_cell530_Material007_0: THREE.Mesh
+    Cube001_cell531_Material007_0: THREE.Mesh
+    Cube001_cell532_Material007_0: THREE.Mesh
+    Cube001_cell533_Material007_0: THREE.Mesh
+    Cube001_cell534_Material007_0: THREE.Mesh
+    Cube001_cell535_Material007_0: THREE.Mesh
+    Cube001_cell536_Material007_0: THREE.Mesh
+    Cube001_cell537_Material007_0: THREE.Mesh
+    Cube001_cell538_Material007_0: THREE.Mesh
+    Cube001_cell539_Material007_0: THREE.Mesh
+    Cube001_cell540_Material007_0: THREE.Mesh
+    Cube001_cell541_Material007_0: THREE.Mesh
+    Cube001_cell542_Material007_0: THREE.Mesh
+    Cube001_cell543_Material007_0: THREE.Mesh
+    Cube001_cell544_Material007_0: THREE.Mesh
+    Cube001_cell545_Material007_0: THREE.Mesh
+    Cube001_cell546_Material007_0: THREE.Mesh
+    Cube001_cell547_Material007_0: THREE.Mesh
+    Cube001_cell548_Material007_0: THREE.Mesh
+    Cube001_cell549_Material007_0: THREE.Mesh
+    Cube001_cell550_Material007_0: THREE.Mesh
+    Cube001_cell551_Material007_0: THREE.Mesh
+    Cube001_cell552_Material007_0: THREE.Mesh
+    Cube001_cell553_Material007_0: THREE.Mesh
+    Cube001_cell554_Material007_0: THREE.Mesh
+    Cube001_cell555_Material007_0: THREE.Mesh
+    Cube001_cell556_Material007_0: THREE.Mesh
+    Cube001_cell557_Material007_0: THREE.Mesh
+    Cube001_cell558_Material007_0: THREE.Mesh
+    Cube001_cell559_Material007_0: THREE.Mesh
+    Cube001_cell560_Material007_0: THREE.Mesh
+    Cube001_cell561_Material007_0: THREE.Mesh
+    Cube001_cell562_Material007_0: THREE.Mesh
+    Cube001_cell563_Material007_0: THREE.Mesh
+    Cube001_cell564_Material007_0: THREE.Mesh
+    Cube001_cell565_Material007_0: THREE.Mesh
+    Cube001_cell566_Material007_0: THREE.Mesh
+    Cube001_cell567_Material007_0: THREE.Mesh
+    Cube001_cell568_Material007_0: THREE.Mesh
+    Cube001_cell569_Material007_0: THREE.Mesh
+    Cube001_cell570_Material007_0: THREE.Mesh
+    Cube001_cell571_Material007_0: THREE.Mesh
+    Cube001_cell572_Material007_0: THREE.Mesh
+    Cube001_cell573_Material007_0: THREE.Mesh
+    Cube001_cell574_Material007_0: THREE.Mesh
+    Cube001_cell575_Material007_0: THREE.Mesh
+    Cube001_cell576_Material007_0: THREE.Mesh
+    Cube001_cell577_Material007_0: THREE.Mesh
+    Cube001_cell578_Material007_0: THREE.Mesh
+    Cube001_cell579_Material007_0: THREE.Mesh
+    Cube001_cell580_Material007_0: THREE.Mesh
+    Cube001_cell581_Material007_0: THREE.Mesh
+    Cube001_cell582_Material007_0: THREE.Mesh
+    Cube001_cell583_Material007_0: THREE.Mesh
+    Cube001_cell584_Material007_0: THREE.Mesh
+    Cube001_cell585_Material007_0: THREE.Mesh
+    Cube001_cell586_Material007_0: THREE.Mesh
+    Cube001_cell587_Material007_0: THREE.Mesh
+    Cube001_cell588_Material007_0: THREE.Mesh
+    Cube001_cell589_Material007_0: THREE.Mesh
+    Cube001_cell590_Material007_0: THREE.Mesh
+    Cube001_cell591_Material007_0: THREE.Mesh
+    Cube001_cell592_Material007_0: THREE.Mesh
+    Cube001_cell593_Material007_0: THREE.Mesh
+    Cube001_cell594_Material007_0: THREE.Mesh
+    Cube001_cell595_Material007_0: THREE.Mesh
+    Cube001_cell596_Material007_0: THREE.Mesh
+    Cube001_cell597_Material007_0: THREE.Mesh
+    Cube001_cell598_Material007_0: THREE.Mesh
+    Cube001_cell599_Material007_0: THREE.Mesh
+    Cube001_cell600_Material007_0: THREE.Mesh
+    Cube001_cell601_Material007_0: THREE.Mesh
+    Cube001_cell602_Material007_0: THREE.Mesh
+    Cube001_cell603_Material007_0: THREE.Mesh
+    Cube001_cell604_Material007_0: THREE.Mesh
+    Cube001_cell605_Material007_0: THREE.Mesh
+    Cube001_cell606_Material007_0: THREE.Mesh
+    Cube001_cell607_Material007_0: THREE.Mesh
+    Cube001_cell608_Material007_0: THREE.Mesh
+    Cube001_cell609_Material007_0: THREE.Mesh
+    Cube001_cell610_Material007_0: THREE.Mesh
+    Cube001_cell611_Material007_0: THREE.Mesh
+    Cube001_cell612_Material007_0: THREE.Mesh
+    Cube001_cell613_Material007_0: THREE.Mesh
+    Cube001_cell614_Material007_0: THREE.Mesh
+    Cube001_cell615_Material007_0: THREE.Mesh
+    Cube001_cell616_Material007_0: THREE.Mesh
+    Cube001_cell617_Material007_0: THREE.Mesh
+    Cube001_cell618_Material007_0: THREE.Mesh
+    Cube001_cell619_Material007_0: THREE.Mesh
+    Cube001_cell620_Material007_0: THREE.Mesh
+    Cube001_cell621_Material007_0: THREE.Mesh
+    Cube001_cell622_Material007_0: THREE.Mesh
+    Cube001_cell623_Material007_0: THREE.Mesh
+    Cube001_cell624_Material007_0: THREE.Mesh
+    Cube001_cell625_Material007_0: THREE.Mesh
+    Cube001_cell626_Material007_0: THREE.Mesh
+    Cube001_cell627_Material007_0: THREE.Mesh
+    Cube001_cell628_Material007_0: THREE.Mesh
+    Cube001_cell629_Material007_0: THREE.Mesh
+    Cube001_cell630_Material007_0: THREE.Mesh
+    Cube001_cell631_Material007_0: THREE.Mesh
+    Cube001_cell632_Material007_0: THREE.Mesh
+    Cube001_cell633_Material007_0: THREE.Mesh
+    Cube001_cell634_Material007_0: THREE.Mesh
+    Cube001_cell635_Material007_0: THREE.Mesh
+    Cube001_cell636_Material007_0: THREE.Mesh
+    Cube001_cell637_Material007_0: THREE.Mesh
+    Cube001_cell638_Material007_0: THREE.Mesh
+    Cube001_cell639_Material007_0: THREE.Mesh
+    Cube001_cell640_Material007_0: THREE.Mesh
+    Cube001_cell641_Material007_0: THREE.Mesh
+    Cube001_cell642_Material007_0: THREE.Mesh
+    Cube001_cell643_Material007_0: THREE.Mesh
+    Cube001_cell644_Material007_0: THREE.Mesh
+    Cube001_cell645_Material007_0: THREE.Mesh
+    Cube001_cell646_Material007_0: THREE.Mesh
+    Cube001_cell647_Material007_0: THREE.Mesh
+    Cube001_cell648_Material007_0: THREE.Mesh
+    Cube001_cell649_Material007_0: THREE.Mesh
+    Cube001_cell650_Material007_0: THREE.Mesh
+    Cube001_cell651_Material007_0: THREE.Mesh
+    Cube001_cell652_Material007_0: THREE.Mesh
+    Cube001_cell653_Material007_0: THREE.Mesh
+    Cube001_cell654_Material007_0: THREE.Mesh
+    Cube001_cell655_Material007_0: THREE.Mesh
+    Cube001_cell656_Material007_0: THREE.Mesh
+    Cube001_cell657_Material007_0: THREE.Mesh
+    Cube001_cell658_Material007_0: THREE.Mesh
+    Cube001_cell659_Material007_0: THREE.Mesh
+    Cube001_cell660_Material007_0: THREE.Mesh
+    Cube001_cell661_Material007_0: THREE.Mesh
+    Cube001_cell662_Material007_0: THREE.Mesh
+    Cube001_cell663_Material007_0: THREE.Mesh
+    Cube001_cell664_Material007_0: THREE.Mesh
+    Cube001_cell665_Material007_0: THREE.Mesh
+    Cube001_cell666_Material007_0: THREE.Mesh
+    Cube001_cell667_Material007_0: THREE.Mesh
+    Cube001_cell668_Material007_0: THREE.Mesh
+    Cube001_cell669_Material007_0: THREE.Mesh
+    Cube001_cell670_Material007_0: THREE.Mesh
+    Cube001_cell671_Material007_0: THREE.Mesh
+    Cube001_cell672_Material007_0: THREE.Mesh
+    Cube001_cell673_Material007_0: THREE.Mesh
+    Cube001_cell674_Material007_0: THREE.Mesh
+    Cube001_cell675_Material007_0: THREE.Mesh
+    Cube001_cell676_Material007_0: THREE.Mesh
+    Cube001_cell677_Material007_0: THREE.Mesh
+    Cube001_cell678_Material007_0: THREE.Mesh
+    Cube001_cell679_Material007_0: THREE.Mesh
+    Cube001_cell680_Material007_0: THREE.Mesh
+    Cube001_cell681_Material007_0: THREE.Mesh
+    Cube001_cell682_Material007_0: THREE.Mesh
+    Cube001_cell683_Material007_0: THREE.Mesh
+    Cube001_cell684_Material007_0: THREE.Mesh
+    Cube001_cell685_Material007_0: THREE.Mesh
+    Cube001_cell686_Material007_0: THREE.Mesh
+    Cube001_cell687_Material007_0: THREE.Mesh
+    Cube001_cell688_Material007_0: THREE.Mesh
+    Cube001_cell689_Material007_0: THREE.Mesh
+  }
   materials: {
-    Carbon_FIber_Shader: THREE.MeshStandardMaterial;
-    VilTorso: THREE.MeshStandardMaterial;
-    EvaGr: THREE.MeshStandardMaterial;
-    Torso: THREE.MeshStandardMaterial;
-    TorsoVil2: THREE.MeshStandardMaterial;
-    EvaBl: THREE.MeshStandardMaterial;
-    EvaVil: THREE.MeshStandardMaterial;
-    ["EvaRed.001"]: THREE.MeshStandardMaterial;
-    EvaDop: THREE.MeshStandardMaterial;
-    EvaEyes: THREE.MeshStandardMaterial;
-    EvaBlack: THREE.MeshStandardMaterial;
-    EVA_LEGS: THREE.MeshStandardMaterial;
-    ["Material.003"]: THREE.MeshStandardMaterial;
-    EvaOr: THREE.MeshStandardMaterial;
-    ["EvaOrange.001"]: THREE.MeshStandardMaterial;
-    ["Material.004"]: THREE.MeshStandardMaterial;
-    Material: THREE.MeshStandardMaterial;
-    HandBlack: THREE.MeshStandardMaterial;
-    material: THREE.MeshStandardMaterial;
-    Hands: THREE.MeshStandardMaterial;
-    HDSblack: THREE.MeshStandardMaterial;
-    HDSvil: THREE.MeshStandardMaterial;
-    EvaOrange: THREE.MeshStandardMaterial;
-    ["Material.007"]: THREE.MeshStandardMaterial;
-    ["Material.005"]: THREE.MeshStandardMaterial;
-    ["Cylinder.001__0"]: THREE.MeshStandardMaterial;
-    ["Material.001"]: THREE.MeshStandardMaterial;
-  };
-};
+    Carbon_FIber_Shader: THREE.MeshStandardMaterial
+    VilTorso: THREE.MeshStandardMaterial
+    EvaGr: THREE.MeshStandardMaterial
+    Torso: THREE.MeshStandardMaterial
+    TorsoVil2: THREE.MeshStandardMaterial
+    EvaBl: THREE.MeshStandardMaterial
+    EvaVil: THREE.MeshStandardMaterial
+    ['EvaRed.001']: THREE.MeshStandardMaterial
+    EvaDop: THREE.MeshStandardMaterial
+    EvaEyes: THREE.MeshStandardMaterial
+    EvaBlack: THREE.MeshStandardMaterial
+    EVA_LEGS: THREE.MeshStandardMaterial
+    ['Material.003']: THREE.MeshStandardMaterial
+    EvaOr: THREE.MeshStandardMaterial
+    ['EvaOrange.001']: THREE.MeshStandardMaterial
+    ['Material.004']: THREE.MeshStandardMaterial
+    Material: THREE.MeshStandardMaterial
+    HandBlack: THREE.MeshStandardMaterial
+    material: THREE.MeshStandardMaterial
+    Hands: THREE.MeshStandardMaterial
+    HDSblack: THREE.MeshStandardMaterial
+    HDSvil: THREE.MeshStandardMaterial
+    EvaOrange: THREE.MeshStandardMaterial
+    ['Material.007']: THREE.MeshStandardMaterial
+    ['Material.005']: THREE.MeshStandardMaterial
+    ['Cylinder.001__0']: THREE.MeshStandardMaterial
+    ['Material.001']: THREE.MeshStandardMaterial
+  }
+}
 
-export function Eva(props: JSX.IntrinsicElements["group"]) {
-  const { nodes, materials } = useGLTF("Eva-01/eva-01.glb") as unknown as GLTFResult;
+export function Eva(props: JSX.IntrinsicElements['group']) {
+  const { nodes, materials } = useGLTF(
+    'Eva-01/eva-01.glb'
+  ) as unknown as GLTFResult
   return (
     <group {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
@@ -912,7 +914,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.eva01024_EvaRed001_0.geometry}
-              material={materials["EvaRed.001"]}
+              material={materials['EvaRed.001']}
             />
           </group>
           <group position={[-0.05, 925.51, 12.56]} scale={100}>
@@ -1048,7 +1050,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.plane009_EvaRed001_0.geometry}
-              material={materials["EvaRed.001"]}
+              material={materials['EvaRed.001']}
             />
           </group>
           <group position={[-0.05, 580.61, -78.92]} scale={100}>
@@ -1117,7 +1119,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.eva01036_Material003_0.geometry}
-              material={materials["Material.003"]}
+              material={materials['Material.003']}
             />
             <mesh
               castShadow
@@ -1164,7 +1166,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Plane002_EvaOrange001_0.geometry}
-              material={materials["EvaOrange.001"]}
+              material={materials['EvaOrange.001']}
             />
           </group>
           <group
@@ -1194,7 +1196,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.eva01004_Material004_0.geometry}
-              material={materials["Material.004"]}
+              material={materials['Material.004']}
             />
             <mesh
               castShadow
@@ -1516,7 +1518,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell044_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -1528,7 +1530,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell049_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -1540,7 +1542,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell050_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -1552,7 +1554,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell053_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -1564,7 +1566,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell056_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -1576,7 +1578,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell057_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -1588,7 +1590,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell060_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -1600,7 +1602,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell074_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -1612,7 +1614,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell082_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -1624,7 +1626,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell085_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -1636,7 +1638,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell088_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -1648,7 +1650,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell091_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -1660,7 +1662,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell097_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -1672,7 +1674,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell102_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -1684,7 +1686,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell104_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -1696,7 +1698,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell106_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -1708,7 +1710,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell108_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -1720,7 +1722,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell113_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -1732,7 +1734,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell118_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -1744,7 +1746,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell119_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -1756,7 +1758,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell132_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -1768,7 +1770,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell136_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -1780,7 +1782,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell137_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -1792,7 +1794,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell142_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -1804,7 +1806,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell144_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -1816,7 +1818,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell149_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -1828,7 +1830,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell151_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -1840,7 +1842,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell154_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -1852,7 +1854,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell157_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -1864,7 +1866,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell162_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -1876,7 +1878,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell170_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -1888,7 +1890,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell190_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -1900,7 +1902,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell203_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -1912,7 +1914,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell205_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -1924,7 +1926,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell206_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -1936,7 +1938,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell207_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -1948,7 +1950,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell209_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -1960,7 +1962,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell218_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -1972,7 +1974,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell220_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -1984,7 +1986,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell224_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -1996,7 +1998,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell225_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2008,7 +2010,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell228_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2020,7 +2022,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell230_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2032,7 +2034,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell231_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2044,7 +2046,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell233_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2056,7 +2058,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell236_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2068,7 +2070,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell241_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2080,7 +2082,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell245_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2092,7 +2094,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell251_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2104,7 +2106,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell253_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2116,7 +2118,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell256_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2128,7 +2130,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell257_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2140,7 +2142,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell263_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2152,7 +2154,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell275_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2164,7 +2166,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell276_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2176,7 +2178,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell278_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2188,7 +2190,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell279_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2200,7 +2202,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell282_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2212,7 +2214,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell287_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2224,7 +2226,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell293_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2236,7 +2238,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell408_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2248,7 +2250,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell409_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2260,7 +2262,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell410_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2272,7 +2274,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell411_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2284,7 +2286,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell412_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2296,7 +2298,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell413_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2308,7 +2310,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell414_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2320,7 +2322,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell415_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2332,7 +2334,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell416_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2344,7 +2346,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell417_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2356,7 +2358,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell418_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2368,7 +2370,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell419_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2380,7 +2382,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell420_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2392,7 +2394,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell421_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2404,7 +2406,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell422_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2416,7 +2418,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell423_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2428,7 +2430,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell424_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2440,7 +2442,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell425_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2452,7 +2454,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell426_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2464,7 +2466,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell427_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2476,7 +2478,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell428_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2488,7 +2490,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell429_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2500,7 +2502,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell430_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2512,7 +2514,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell431_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2524,7 +2526,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell432_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2536,7 +2538,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell433_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2548,7 +2550,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell434_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2560,7 +2562,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell435_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2572,7 +2574,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell436_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2584,7 +2586,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell437_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2596,7 +2598,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell438_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2608,7 +2610,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell439_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2620,7 +2622,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell440_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2632,7 +2634,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell441_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2644,7 +2646,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell442_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2656,7 +2658,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell443_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2668,7 +2670,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell444_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2680,7 +2682,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell445_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2692,7 +2694,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell446_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2704,7 +2706,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell447_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2716,7 +2718,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell448_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2728,7 +2730,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell449_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2740,7 +2742,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell450_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2752,7 +2754,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell451_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2764,7 +2766,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell452_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2776,7 +2778,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell453_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2788,7 +2790,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell454_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2800,7 +2802,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell455_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2812,7 +2814,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell456_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2824,7 +2826,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell457_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2836,7 +2838,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell458_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2848,7 +2850,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell459_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2860,7 +2862,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell460_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2872,7 +2874,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell461_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2884,7 +2886,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell462_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2896,7 +2898,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell463_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2908,7 +2910,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell464_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2920,7 +2922,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell465_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2932,7 +2934,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell466_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2944,7 +2946,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell467_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2956,7 +2958,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell468_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2968,7 +2970,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell469_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2980,7 +2982,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell470_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -2992,7 +2994,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell471_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3004,7 +3006,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell472_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3016,7 +3018,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell473_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3028,7 +3030,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell474_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3040,7 +3042,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell475_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3052,7 +3054,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell476_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3064,7 +3066,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell477_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3076,7 +3078,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell478_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3088,7 +3090,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell479_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3100,7 +3102,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell480_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3112,7 +3114,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell481_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3124,7 +3126,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell482_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3136,7 +3138,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell483_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3148,7 +3150,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell484_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3160,7 +3162,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell485_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3172,7 +3174,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell486_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3184,7 +3186,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell487_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3196,7 +3198,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell488_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3208,7 +3210,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell489_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3220,7 +3222,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell490_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3232,7 +3234,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell491_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3244,7 +3246,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell492_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3256,7 +3258,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell493_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3268,7 +3270,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell494_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3280,7 +3282,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell495_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3292,7 +3294,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell496_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3304,7 +3306,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell497_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3316,7 +3318,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell498_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3328,7 +3330,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell499_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3340,7 +3342,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell500_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3352,7 +3354,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell501_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3364,7 +3366,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell502_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3376,7 +3378,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell503_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3388,7 +3390,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell504_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3400,7 +3402,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell505_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3412,7 +3414,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell506_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3424,7 +3426,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell507_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3436,7 +3438,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell508_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3448,7 +3450,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell509_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3460,7 +3462,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell510_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3472,7 +3474,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell511_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3484,7 +3486,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell512_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3496,7 +3498,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell513_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3508,7 +3510,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell514_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3520,7 +3522,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell515_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3532,7 +3534,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell516_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3544,7 +3546,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell517_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3556,7 +3558,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell518_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3568,7 +3570,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell519_Material005_0.geometry}
-              material={materials["Material.005"]}
+              material={materials['Material.005']}
             />
           </group>
           <group
@@ -3580,7 +3582,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell520_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3592,7 +3594,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell521_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3604,7 +3606,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell522_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3616,7 +3618,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell523_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3628,7 +3630,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell524_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3640,7 +3642,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell525_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3652,7 +3654,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell526_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3664,7 +3666,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell527_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3676,7 +3678,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell528_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3688,7 +3690,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell529_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3700,7 +3702,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell530_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3712,7 +3714,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell531_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3724,7 +3726,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell532_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3736,7 +3738,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell533_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3748,7 +3750,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell534_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3760,7 +3762,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell535_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3772,7 +3774,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell536_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3784,7 +3786,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell537_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3796,7 +3798,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell538_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3808,7 +3810,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell539_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3820,7 +3822,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell540_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3832,7 +3834,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell541_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3844,7 +3846,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell542_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3856,7 +3858,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell543_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3868,7 +3870,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell544_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3880,7 +3882,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell545_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3892,7 +3894,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell546_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3904,7 +3906,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell547_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3916,7 +3918,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell548_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3928,7 +3930,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell549_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3940,7 +3942,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell550_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3952,7 +3954,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell551_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3964,7 +3966,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell552_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3976,7 +3978,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell553_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -3988,7 +3990,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell554_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4000,7 +4002,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell555_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4012,7 +4014,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell556_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4024,7 +4026,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell557_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4036,7 +4038,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell558_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4048,7 +4050,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell559_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4060,7 +4062,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell560_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4072,7 +4074,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell561_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4084,7 +4086,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell562_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4096,7 +4098,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell563_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4108,7 +4110,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell564_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4120,7 +4122,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell565_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4132,7 +4134,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell566_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4144,7 +4146,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell567_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4156,7 +4158,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell568_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4168,7 +4170,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell569_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4180,7 +4182,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell570_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4192,7 +4194,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell571_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4204,7 +4206,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell572_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4216,7 +4218,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell573_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4228,7 +4230,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell574_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4240,7 +4242,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell575_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4252,7 +4254,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell576_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4264,7 +4266,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell577_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4276,7 +4278,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell578_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4288,7 +4290,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell579_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4300,7 +4302,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell580_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4312,7 +4314,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell581_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4324,7 +4326,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell582_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4336,7 +4338,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell583_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4348,7 +4350,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell584_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4360,7 +4362,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell585_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4372,7 +4374,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell586_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4384,7 +4386,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell587_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4396,7 +4398,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell588_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4408,7 +4410,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell589_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4420,7 +4422,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell590_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4432,7 +4434,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell591_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4444,7 +4446,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell592_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4456,7 +4458,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell593_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4468,7 +4470,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell594_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4480,7 +4482,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell595_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4492,7 +4494,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell596_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4504,7 +4506,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell597_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4516,7 +4518,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell598_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4528,7 +4530,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell599_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4540,7 +4542,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell600_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4552,7 +4554,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell601_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4564,7 +4566,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell602_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4576,7 +4578,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell603_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4588,7 +4590,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell604_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4600,7 +4602,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell605_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4612,7 +4614,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell606_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4624,7 +4626,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell607_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4636,7 +4638,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell608_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4648,7 +4650,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell609_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4660,7 +4662,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell610_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4672,7 +4674,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell611_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4684,7 +4686,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell612_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4696,7 +4698,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell613_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4708,7 +4710,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell614_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4720,7 +4722,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell615_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4732,7 +4734,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell616_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4744,7 +4746,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell617_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4756,7 +4758,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell618_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4768,7 +4770,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell619_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4780,7 +4782,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell620_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4792,7 +4794,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell621_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4804,7 +4806,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell622_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4816,7 +4818,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell623_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4828,7 +4830,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell624_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4840,7 +4842,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell625_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4852,7 +4854,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell626_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4864,7 +4866,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell627_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4876,7 +4878,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell628_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4888,7 +4890,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell629_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4900,7 +4902,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell630_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4912,7 +4914,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell631_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4924,7 +4926,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell632_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4936,7 +4938,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell633_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4948,7 +4950,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell634_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4960,7 +4962,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell635_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4972,7 +4974,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell636_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4984,7 +4986,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell637_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -4996,7 +4998,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell638_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5008,7 +5010,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell639_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5020,7 +5022,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell640_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5032,7 +5034,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell641_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5044,7 +5046,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell642_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5056,7 +5058,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell643_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5068,7 +5070,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell644_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5080,7 +5082,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell645_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5092,7 +5094,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell646_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5104,7 +5106,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell647_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5116,7 +5118,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell648_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5128,7 +5130,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell649_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5140,7 +5142,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell650_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5152,7 +5154,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell651_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5164,7 +5166,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell652_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5176,7 +5178,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell653_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5188,7 +5190,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell654_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5200,7 +5202,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell655_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5212,7 +5214,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell656_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5224,7 +5226,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell657_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5236,7 +5238,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell658_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5248,7 +5250,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell659_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5260,7 +5262,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell660_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5272,7 +5274,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell661_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5284,7 +5286,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell662_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5296,7 +5298,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell663_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5308,7 +5310,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell664_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5320,7 +5322,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell665_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5332,7 +5334,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell666_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5344,7 +5346,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell667_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5356,7 +5358,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell668_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5368,7 +5370,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell669_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5380,7 +5382,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell670_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5392,7 +5394,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell671_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5404,7 +5406,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell672_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5416,7 +5418,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell673_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5428,7 +5430,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell674_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5440,7 +5442,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell675_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5452,7 +5454,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell676_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5464,7 +5466,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell677_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5476,7 +5478,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell678_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5488,7 +5490,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell679_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5500,7 +5502,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell680_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5512,7 +5514,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell681_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5524,7 +5526,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell682_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5536,7 +5538,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell683_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5548,7 +5550,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell684_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5560,7 +5562,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell685_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5572,7 +5574,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell686_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5584,7 +5586,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell687_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5596,7 +5598,7 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell688_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
           <group
@@ -5608,13 +5610,13 @@ export function Eva(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Cube001_cell689_Material007_0.geometry}
-              material={materials["Material.007"]}
+              material={materials['Material.007']}
             />
           </group>
         </group>
       </group>
     </group>
-  );
+  )
 }
 
-useGLTF.preload("Eva-01/eva-01.glb");
+useGLTF.preload('Eva-01/eva-01.glb')

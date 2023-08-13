@@ -14,7 +14,7 @@ export function ScrollContainer(props: Props) {
       Math.atan(offset * Math.PI * 5) * -2.7 + 2,
       Math.sin(offset * Math.PI * 3) * 5 + 2
     );
-    state.camera.lookAt(offset - 0.6, -offset * 2.9 + 1.3, offset - 0.4);
+    state.camera.lookAt(offset * 1.5 - 0.6, -offset * 1.9, offset * 1.5 - 0.4);
   });
   return <group>{props.children}</group>;
 }
